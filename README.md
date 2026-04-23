@@ -260,7 +260,7 @@ A lifted action schema is written as:
 $$
 a(x_1,\ldots,x_k)
 =
-\langle \operatorname{Pre}(a), \operatorname{Add}(a), \operatorname{Del}(a) \rangle
+\langle \mathrm{Pre}(a), \mathrm{Add}(a), \mathrm{Del}(a) \rangle
 $$
 
 Grounding substitutes concrete objects for the schema variables:
@@ -274,7 +274,7 @@ The grounded operator is:
 $$
 a\theta
 =
-\langle \operatorname{Pre}(a)\theta,\ \operatorname{Add}(a)\theta,\ \operatorname{Del}(a)\theta \rangle
+\langle \mathrm{Pre}(a)\theta,\ \mathrm{Add}(a)\theta,\ \mathrm{Del}(a)\theta \rangle
 $$
 
 For example, the schema `Move(b,x,y)` can produce grounded actions such as
@@ -282,7 +282,7 @@ For example, the schema `Move(b,x,y)` can produce grounded actions such as
 when:
 
 $$
-\operatorname{Pre}(a\theta) \subseteq s
+\mathrm{Pre}(a\theta) \subseteq s
 $$
 
 ### Transition Function
@@ -290,9 +290,9 @@ $$
 For an applicable grounded action $a$, the successor state is:
 
 $$
-\operatorname{Succ}(s,a)
+\mathrm{Succ}(s,a)
 =
-\left(s \setminus \operatorname{Del}(a)\right) \cup \operatorname{Add}(a)
+\left(s \setminus \mathrm{Del}(a)\right) \cup \mathrm{Add}(a)
 $$
 
 All planners in this repository use unit action cost, so shortest plans are
@@ -331,15 +331,15 @@ $$
 Each grounded action has preconditions, add effects, and delete effects:
 
 $$
-a = \langle \operatorname{Pre}(a), \operatorname{Add}(a), \operatorname{Del}(a) \rangle
+a = \langle \mathrm{Pre}(a), \mathrm{Add}(a), \mathrm{Del}(a) \rangle
 $$
 
 An action is applicable when all positive preconditions are true:
 
 $$
-\operatorname{Applicable}(a,s)
+\mathrm{Applicable}(a,s)
 \iff
-\operatorname{Pre}(a) \subseteq s
+\mathrm{Pre}(a) \subseteq s
 $$
 
 The successor function is:
@@ -347,7 +347,7 @@ The successor function is:
 $$
 \gamma(s,a)
 =
-\left(s \setminus \operatorname{Del}(a)\right) \cup \operatorname{Add}(a)
+\left(s \setminus \mathrm{Del}(a)\right) \cup \mathrm{Add}(a)
 $$
 
 All planners use unit action cost:
@@ -382,7 +382,7 @@ $$
 $$
 L_{d+1}
 =
-\{\gamma(s,a)\mid s\in L_d,\ a\in A,\ \operatorname{Applicable}(a,s)\}
+\{\gamma(s,a)\mid s\in L_d,\ a\in A,\ \mathrm{Applicable}(a,s)\}
 \setminus Visited
 $$
 
@@ -444,7 +444,7 @@ $$
 The relaxed plan heuristic first removes delete effects:
 
 $$
-\gamma^+(s,a)=s\cup\operatorname{Add}(a)
+\gamma^+(s,a)=s\cup\mathrm{Add}(a)
 $$
 
 Then it builds monotone fact layers:
@@ -457,7 +457,7 @@ $$
 F_{i+1}
 =
 F_i\cup
-\{\operatorname{Add}(a)\mid a\in A,\ \operatorname{Pre}(a)\subseteq F_i\}
+\{\mathrm{Add}(a)\mid a\in A,\ \mathrm{Pre}(a)\subseteq F_i\}
 $$
 
 Once $G\subseteq F_k$, the heuristic greedily extracts a relaxed support plan
@@ -492,8 +492,8 @@ $Need_k=G$. Moving backward through the fact layers, selected actions add the
 facts currently needed:
 
 $$
-a_i\in\arg\min_{a:\operatorname{Add}(a)\cap Need_i\ne\emptyset}
-|\operatorname{Pre}(a)\setminus F_{i-1}|
+a_i\in\arg\min_{a:\mathrm{Add}(a)\cap Need_i\ne\emptyset}
+|\mathrm{Pre}(a)\setminus F_{i-1}|
 $$
 
 The needed set is then updated by replacing achieved facts with the selected
@@ -502,7 +502,7 @@ action preconditions:
 $$
 Need_{i-1}
 =
-(Need_i\setminus \operatorname{Add}(a_i))\cup \operatorname{Pre}(a_i)
+(Need_i\setminus \mathrm{Add}(a_i))\cup \mathrm{Pre}(a_i)
 $$
 
 | environment | plan length | expanded | generated | time ms |
@@ -597,15 +597,15 @@ $$
 For an action, additive relaxed cost is:
 
 $$
-\operatorname{cost}_{add}(a)
+\mathrm{cost}_{add}(a)
 =
-1+\sum_{p\in\operatorname{Pre}(a)}c_s(p)
+1+\sum_{p\in\mathrm{Pre}(a)}c_s(p)
 $$
 
 If $a$ adds $q$, the fact cost is relaxed by:
 
 $$
-c_s(q)=\min(c_s(q),\operatorname{cost}_{add}(a))
+c_s(q)=\min(c_s(q),\mathrm{cost}_{add}(a))
 $$
 
 The state heuristic is:
@@ -633,8 +633,8 @@ c_s^{t+1}(q)
 \min
 \left(
 c_s^t(q),
-\min_{a:q\in\operatorname{Add}(a)}
-1+\sum_{p\in\operatorname{Pre}(a)}c_s^t(p)
+\min_{a:q\in\mathrm{Add}(a)}
+1+\sum_{p\in\mathrm{Pre}(a)}c_s^t(p)
 \right)
 $$
 
@@ -674,15 +674,15 @@ The `optimal` mode uses `h_max`, which changes the conjunction cost from a sum
 to a maximum:
 
 $$
-\operatorname{cost}_{max}(a)
+\mathrm{cost}_{max}(a)
 =
-1+\max_{p\in\operatorname{Pre}(a)}c_s(p)
+1+\max_{p\in\mathrm{Pre}(a)}c_s(p)
 $$
 
 Fact costs are still updated by:
 
 $$
-c_s(q)=\min(c_s(q),\operatorname{cost}_{max}(a))
+c_s(q)=\min(c_s(q),\mathrm{cost}_{max}(a))
 $$
 
 The heuristic is:
@@ -709,8 +709,8 @@ c_s^{t+1}(q)
 \min
 \left(
 c_s^t(q),
-\min_{a:q\in\operatorname{Add}(a)}
-1+\max_{p\in\operatorname{Pre}(a)}c_s^t(p)
+\min_{a:q\in\mathrm{Add}(a)}
+1+\max_{p\in\mathrm{Pre}(a)}c_s^t(p)
 \right)
 $$
 
