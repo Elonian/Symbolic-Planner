@@ -208,9 +208,7 @@ outputs/summary.json
 
 Each environment defines a deterministic STRIPS planning problem:
 
-$$
-\Pi = \langle \mathcal{O}, \mathcal{P}, \mathcal{A}, s_0, G \rangle
-$$
+$$ \Pi = \langle \mathcal{O}, \mathcal{P}, \mathcal{A}, s_0, G \rangle $$
 
 where $\mathcal{O}$ is the object set, $\mathcal{P}$ is the predicate
 vocabulary, $\mathcal{A}$ is the set of lifted action schemas, $s_0$ is the
@@ -230,25 +228,15 @@ The environment file maps directly onto that tuple:
 Let $\mathcal{F}$ be the finite set of all grounded facts that can be formed from
 the predicates and objects. A symbolic state is a subset of those facts:
 
-$$
-s \subseteq \mathcal{F}
-$$
+$$ s \subseteq \mathcal{F} $$
 
 The initial state and goal are also fact sets:
 
-$$
-s_0 \subseteq \mathcal{F},
-\qquad
-G \subseteq \mathcal{F}
-$$
+$$ s_0 \subseteq \mathcal{F}, \qquad G \subseteq \mathcal{F} $$
 
 A state satisfies the goal exactly when all goal facts are true:
 
-$$
-s \models G
-\quad \Longleftrightarrow \quad
-G \subseteq s
-$$
+$$ s \models G \quad \Longleftrightarrow \quad G \subseteq s $$
 
 Search nodes are these fact sets. Two nodes are the same if their sorted fact
 sets are identical.
@@ -257,43 +245,27 @@ sets are identical.
 
 A lifted action schema is written as:
 
-$$
-a(x_1,\ldots,x_k)
-=
-\langle \mathrm{Pre}(a), \mathrm{Add}(a), \mathrm{Del}(a) \rangle
-$$
+$$ a(x_1,\ldots,x_k) = \langle \mathrm{Pre}(a), \mathrm{Add}(a), \mathrm{Del}(a) \rangle $$
 
 Grounding substitutes concrete objects for the schema variables:
 
-$$
-\theta : \{x_1,\ldots,x_k\} \rightarrow \mathcal{O}
-$$
+$$ \theta : \{x_1,\ldots,x_k\} \rightarrow \mathcal{O} $$
 
 The grounded operator is:
 
-$$
-a\theta
-=
-\langle \mathrm{Pre}(a)\theta,\ \mathrm{Add}(a)\theta,\ \mathrm{Del}(a)\theta \rangle
-$$
+$$ a\theta = \langle \mathrm{Pre}(a)\theta,\ \mathrm{Add}(a)\theta,\ \mathrm{Del}(a)\theta \rangle $$
 
 For example, the schema `Move(b,x,y)` can produce grounded actions such as
 `Move(A,B,C)` or `Move(C,Table,A)`. A grounded action is applicable in state $s$
 when:
 
-$$
-\mathrm{Pre}(a\theta) \subseteq s
-$$
+$$ \mathrm{Pre}(a\theta) \subseteq s $$
 
 ### Transition Function
 
 For an applicable grounded action $a$, the successor state is:
 
-$$
-\mathrm{Succ}(s,a)
-=
-\left(s \setminus \mathrm{Del}(a)\right) \cup \mathrm{Add}(a)
-$$
+$$ \mathrm{Succ}(s,a) = \left(s \setminus \mathrm{Del}(a)\right) \cup \mathrm{Add}(a) $$
 
 All planners in this repository use unit action cost, so shortest plans are
 minimum length action sequences.
@@ -315,59 +287,39 @@ minimum length action sequences.
 
 Let the planning problem be:
 
-$$
-\Pi = \langle \mathcal{F}, A, s_0, G \rangle
-$$
+$$ \Pi = \langle \mathcal{F}, A, s_0, G \rangle $$
 
 where $\mathcal{F}$ is the finite set of possible grounded facts, $A$ is the
 finite set of grounded actions, $s_0 \subseteq \mathcal{F}$ is the initial
 state, and $G \subseteq \mathcal{F}$ is the goal fact set. A state is a set of
 facts:
 
-$$
-s \subseteq \mathcal{F}
-$$
+$$ s \subseteq \mathcal{F} $$
 
 Each grounded action has preconditions, add effects, and delete effects:
 
-$$
-a = \langle \mathrm{Pre}(a), \mathrm{Add}(a), \mathrm{Del}(a) \rangle
-$$
+$$ a = \langle \mathrm{Pre}(a), \mathrm{Add}(a), \mathrm{Del}(a) \rangle $$
 
 An action is applicable when all positive preconditions are true:
 
-$$
-\mathrm{Applicable}(a,s)
-\iff
-\mathrm{Pre}(a) \subseteq s
-$$
+$$ \mathrm{Applicable}(a,s) \iff \mathrm{Pre}(a) \subseteq s $$
 
 The successor function is:
 
-$$
-\gamma(s,a)
-=
-\left(s \setminus \mathrm{Del}(a)\right) \cup \mathrm{Add}(a)
-$$
+$$ \gamma(s,a) = \left(s \setminus \mathrm{Del}(a)\right) \cup \mathrm{Add}(a) $$
 
 All planners use unit action cost:
 
-$$
-c(a)=1
-$$
+$$ c(a)=1 $$
 
 For a path from the start to state $s$, the path cost is therefore the number of
 actions:
 
-$$
-g(s)=|\pi_{s_0 \rightarrow s}|
-$$
+$$ g(s)=|\pi_{s_0 \rightarrow s}| $$
 
 The search goal test is:
 
-$$
-goal(s) \iff G \subseteq s
-$$
+$$ goal(s) \iff G \subseteq s $$
 
 ### Breadth First Search (`bfs`)
 
@@ -375,39 +327,24 @@ BFS is the blind optimal baseline. It expands states by nondecreasing depth, so
 the frontier at depth $d$ contains exactly the states reachable in $d$ actions
 that have not already been visited:
 
-$$
-L_0=\{s_0\}
-$$
+$$ L_0=\{s_0\} $$
 
-$$
-L_{d+1}
-=
-\{\gamma(s,a)\mid s\in L_d,\ a\in A,\ \mathrm{Applicable}(a,s)\}
-\setminus Visited
-$$
+$$ L_{d+1} = \{\gamma(s,a)\mid s\in L_d,\ a\in A,\ \mathrm{Applicable}(a,s)\} \setminus Visited $$
 
 The first goal reached is therefore:
 
-$$
-s^*=\arg\min_{s:G\subseteq s}g(s)
-$$
+$$ s^*=\arg\min_{s:G\subseteq s}g(s) $$
 
 Since every action has unit cost, BFS is complete and shortest plan optimal on
 these finite symbolic tasks. Its cost is that it has no preference for relevant
 actions, so the number of expansions can approach the full reachable graph:
 
-$$
-O(|S|+|E|)
-$$
+$$ O(|S|+|E|) $$
 
 If the average branching factor is $b$ and the shortest solution depth is $d^*$,
 then the worst case number of generated nodes grows like:
 
-$$
-N_{BFS}(d^*)=\sum_{i=0}^{d^*} b^i
-=
-\frac{b^{d^*+1}-1}{b-1}
-$$
+$$ N_{BFS}(d^*)=\sum_{i=0}^{d^*} b^i = \frac{b^{d^*+1}-1}{b-1} $$
 
 That expression is the reason BFS becomes expensive in the multi robot domains.
 It has to enumerate all shallow alternatives before it can commit to the action
@@ -437,35 +374,22 @@ frontier.
 This planner uses A* with an FF style relaxed plan heuristic. A* ranks each open
 state by:
 
-$$
-f(s)=g(s)+h_{rp}(s)
-$$
+$$ f(s)=g(s)+h_{rp}(s) $$
 
 The relaxed plan heuristic first removes delete effects:
 
-$$
-\gamma^+(s,a)=s\cup\mathrm{Add}(a)
-$$
+$$ \gamma^+(s,a)=s\cup\mathrm{Add}(a) $$
 
 Then it builds monotone fact layers:
 
-$$
-F_0=s
-$$
+$$ F_0=s $$
 
-$$
-F_{i+1}
-=
-F_i\cup
-\{\mathrm{Add}(a)\mid a\in A,\ \mathrm{Pre}(a)\subseteq F_i\}
-$$
+$$ F_{i+1} = F_i\cup \{\mathrm{Add}(a)\mid a\in A,\ \mathrm{Pre}(a)\subseteq F_i\} $$
 
 Once $G\subseteq F_k$, the heuristic greedily extracts a relaxed support plan
 $\pi^+$ and uses:
 
-$$
-h_{rp}(s)=|\pi^+|
-$$
+$$ h_{rp}(s)=|\pi^+| $$
 
 This is much more goal directed than BFS because it estimates which actions can
 support missing facts. It is not admissible, so it is a complete graph search on
@@ -473,13 +397,9 @@ finite tasks but not a shortest plan proof.
 
 The search still preserves the normal A* bookkeeping:
 
-$$
-g(s')=g(s)+1
-$$
+$$ g(s')=g(s)+1 $$
 
-$$
-best_g(s')=\min(best_g(s'),g(s'))
-$$
+$$ best_g(s')=\min(best_g(s'),g(s')) $$
 
 A successor is useful only if it improves the best known cost for that symbolic
 state. This prevents loops such as moving an item away and then immediately
@@ -491,19 +411,12 @@ The relaxed plan extraction can be read as a backward support problem. Let
 $Need_k=G$. Moving backward through the fact layers, selected actions add the
 facts currently needed:
 
-$$
-a_i\in\arg\min_{a:\mathrm{Add}(a)\cap Need_i\ne\emptyset}
-|\mathrm{Pre}(a)\setminus F_{i-1}|
-$$
+$$ a_i\in\arg\min_{a:\mathrm{Add}(a)\cap Need_i\ne\emptyset} |\mathrm{Pre}(a)\setminus F_{i-1}| $$
 
 The needed set is then updated by replacing achieved facts with the selected
 action preconditions:
 
-$$
-Need_{i-1}
-=
-(Need_i\setminus \mathrm{Add}(a_i))\cup \mathrm{Pre}(a_i)
-$$
+$$ Need_{i-1} = (Need_i\setminus \mathrm{Add}(a_i))\cup \mathrm{Pre}(a_i) $$
 
 | environment | plan length | expanded | generated | time ms |
 | --- | ---: | ---: | ---: | ---: |
@@ -525,15 +438,11 @@ $$
 
 Goal count A* uses the number of unsatisfied goal facts:
 
-$$
-h_{goal}(s)=|\{p\in G\mid p\notin s\}|
-$$
+$$ h_{goal}(s)=|\{p\in G\mid p\notin s\}| $$
 
 and ranks states by:
 
-$$
-f_{goal}(s)=g(s)+h_{goal}(s)
-$$
+$$ f_{goal}(s)=g(s)+h_{goal}(s) $$
 
 This heuristic is cheap and often better than blind search, but it ignores
 causal structure. It treats all missing goals equally even when one goal needs a
@@ -541,28 +450,20 @@ long action chain and another needs one action.
 
 The heuristic value changes only when a goal fact becomes true or false:
 
-$$
-\Delta h_{goal}
-=
-|\{p\in G\mid p\notin s'\}|-|\{p\in G\mid p\notin s\}|
-$$
+$$ \Delta h_{goal} = |\{p\in G\mid p\notin s'\}|-|\{p\in G\mid p\notin s\}| $$
 
 That means many non goal enabling actions have no immediate heuristic reward. In
 Blocksworld, clearing a buried block can be essential, but if the clearing move
 does not directly create a goal fact, $h_{goal}$ may not decrease. The planner
 therefore behaves like BFS across many plateaus:
 
-$$
-\{s\mid h_{goal}(s)=k\}
-$$
+$$ \{s\mid h_{goal}(s)=k\} $$
 
 It is also not generally admissible. One action can achieve several missing
 goals, so counting each missing goal separately can overestimate the true
 remaining distance:
 
-$$
-h_{goal}(s)>h^*(s)\quad\text{is possible}
-$$
+$$ h_{goal}(s)>h^*(s)\quad\text{is possible} $$
 
 | environment | plan length | expanded | generated | time ms |
 | --- | ---: | ---: | ---: | ---: |
@@ -584,41 +485,27 @@ $$
 
 The additive heuristic computes relaxed fact costs. True facts cost zero:
 
-$$
-c_s(p)=0\quad\text{if }p\in s
-$$
+$$ c_s(p)=0\quad\text{if }p\in s $$
 
 Unknown facts start at infinity:
 
-$$
-c_s(p)=\infty\quad\text{if }p\notin s
-$$
+$$ c_s(p)=\infty\quad\text{if }p\notin s $$
 
 For an action, additive relaxed cost is:
 
-$$
-\mathrm{cost}_{add}(a)
-=
-1+\sum_{p\in\mathrm{Pre}(a)}c_s(p)
-$$
+$$ \mathrm{cost}_{add}(a) = 1+\sum_{p\in\mathrm{Pre}(a)}c_s(p) $$
 
 If $a$ adds $q$, the fact cost is relaxed by:
 
-$$
-c_s(q)=\min(c_s(q),\mathrm{cost}_{add}(a))
-$$
+$$ c_s(q)=\min(c_s(q),\mathrm{cost}_{add}(a)) $$
 
 The state heuristic is:
 
-$$
-h_{add}(s)=\sum_{q\in G}c_s(q)
-$$
+$$ h_{add}(s)=\sum_{q\in G}c_s(q) $$
 
 and the A* priority is:
 
-$$
-f_{add}(s)=g(s)+h_{add}(s)
-$$
+$$ f_{add}(s)=g(s)+h_{add}(s) $$
 
 `h_add` can over count shared subplans, so it is not admissible. In return, it
 often strongly separates useful states from irrelevant states.
@@ -627,26 +514,13 @@ The computation is a fixed point over relaxed fact costs. Starting from the
 current state facts, the update rule is repeatedly applied until no fact cost
 decreases:
 
-$$
-c_s^{t+1}(q)
-=
-\min
-\left(
-c_s^t(q),
-\min_{a:q\in\mathrm{Add}(a)}
-1+\sum_{p\in\mathrm{Pre}(a)}c_s^t(p)
-\right)
-$$
+$$ c_s^{t+1}(q) = \min \left( c_s^t(q), \min_{a:q\in\mathrm{Add}(a)} 1+\sum_{p\in\mathrm{Pre}(a)}c_s^t(p) \right) $$
 
 Because delete effects are ignored, fact costs only decrease, and the process
 converges after a finite number of decreases. The additive sum makes the
 heuristic sensitive to the number of subgoals still requiring support:
 
-$$
-h_{add}(s_1)<h_{add}(s_2)
-\Rightarrow
-s_1\ \text{is estimated closer to satisfying all goals}
-$$
+$$ h_{add}(s_1)<h_{add}(s_2) \Rightarrow s_1\ \text{is estimated closer to satisfying all goals} $$
 
 The tradeoff is double counting. If one action supports two goals, the shared
 cost can be counted twice. That makes the heuristic strong for guidance but
@@ -673,29 +547,19 @@ unsafe as an optimality proof.
 The `optimal` mode uses `h_max`, which changes the conjunction cost from a sum
 to a maximum:
 
-$$
-\mathrm{cost}_{max}(a)
-=
-1+\max_{p\in\mathrm{Pre}(a)}c_s(p)
-$$
+$$ \mathrm{cost}_{max}(a) = 1+\max_{p\in\mathrm{Pre}(a)}c_s(p) $$
 
 Fact costs are still updated by:
 
-$$
-c_s(q)=\min(c_s(q),\mathrm{cost}_{max}(a))
-$$
+$$ c_s(q)=\min(c_s(q),\mathrm{cost}_{max}(a)) $$
 
 The heuristic is:
 
-$$
-h_{max}(s)=\max_{q\in G}c_s(q)
-$$
+$$ h_{max}(s)=\max_{q\in G}c_s(q) $$
 
 Because max does not double count shared subplans, it is admissible:
 
-$$
-h_{max}(s)\le h^*(s)
-$$
+$$ h_{max}(s)\le h^*(s) $$
 
 so A* with this heuristic returns shortest unit cost plans. The tradeoff is that
 the heuristic is less aggressive than `h_add`, so it can expand more states or
@@ -703,24 +567,13 @@ spend more wall clock time evaluating states.
 
 The fixed point equation for $h_{max}$ is:
 
-$$
-c_s^{t+1}(q)
-=
-\min
-\left(
-c_s^t(q),
-\min_{a:q\in\mathrm{Add}(a)}
-1+\max_{p\in\mathrm{Pre}(a)}c_s^t(p)
-\right)
-$$
+$$ c_s^{t+1}(q) = \min \left( c_s^t(q), \min_{a:q\in\mathrm{Add}(a)} 1+\max_{p\in\mathrm{Pre}(a)}c_s^t(p) \right) $$
 
 Using max instead of sum means a conjunction is priced by its hardest relaxed
 precondition, not by all preconditions together. This makes $h_{max}$ more
 conservative:
 
-$$
-h_{max}(s)\le h_{add}(s)
-$$
+$$ h_{max}(s)\le h_{add}(s) $$
 
 Conservatism is useful for optimality because it avoids charging twice for
 shared relaxed work. It is less useful for pruning because many states can share
@@ -747,15 +600,11 @@ the same max cost even when one has many more unfinished subgoals.
 The strong planner is the selected practical planner for this project. It uses
 the same additive delete relaxation estimate as `astar_hadd`:
 
-$$
-h_{strong}(s)=h_{add}(s)
-$$
+$$ h_{strong}(s)=h_{add}(s) $$
 
 and the same A* ranking:
 
-$$
-f_{strong}(s)=g(s)+h_{add}(s)
-$$
+$$ f_{strong}(s)=g(s)+h_{add}(s) $$
 
 The reason to keep it as a named mode is experimental clarity: it is the mode
 used for the main qualitative visualizations and the mode that best balances
@@ -763,23 +612,14 @@ plan quality and search effort in the larger symbolic domains.
 
 Mathematically, `strong` is the same evaluation function as additive A*:
 
-$$
-s_{next}
-=
-\arg\min_{s\in Open}
-\left(g(s)+h_{add}(s)\right)
-$$
+$$ s_{next} = \arg\min_{s\in Open} \left(g(s)+h_{add}(s)\right) $$
 
 The important behavior is how $h_{add}$ ranks parallel subgoals. For delivery
 domains, a state with two unfinished deliveries receives roughly the sum of two
 remaining relaxed delivery costs, while a state with one finished delivery and
 one unfinished delivery receives a smaller estimate:
 
-$$
-h_{add}(s)
-=
-c_s(g_1)+c_s(g_2)+c_s(g_3)
-$$
+$$ h_{add}(s) = c_s(g_1)+c_s(g_2)+c_s(g_3) $$
 
 That is why the method can avoid expanding many states that move the wrong robot
 or manipulate the wrong item. It is still not a proof of shortest plan length,
@@ -807,22 +647,16 @@ far fewer states.
 Weighted A* uses the relaxed plan heuristic but multiplies it by a weight. The
 default experiment uses $w=5$:
 
-$$
-f_w(s)=g(s)+w\cdot h_{rp}(s)
-$$
+$$ f_w(s)=g(s)+w\cdot h_{rp}(s) $$
 
 When $w>1$, the search prefers heuristic progress more aggressively than path
 cost. This can reduce expansions, but it removes shortest plan guarantees:
 
-$$
-w>1\Rightarrow \text{not generally optimal}
-$$
+$$ w>1\Rightarrow \text{not generally optimal} $$
 
 The priority difference from normal A* is:
 
-$$
-f_w(s)-f(s)=(w-1)h_{rp}(s)
-$$
+$$ f_w(s)-f(s)=(w-1)h_{rp}(s) $$
 
 So when $h_{rp}(s)$ is large, the planner strongly prefers states that reduce
 the heuristic, even if they require a longer prefix. If the heuristic were
@@ -851,31 +685,22 @@ planner.
 
 Greedy best first search ignores path cost in the priority function:
 
-$$
-f_{gbfs}(s)=h_{rp}(s)
-$$
+$$ f_{gbfs}(s)=h_{rp}(s) $$
 
 It expands whichever state appears closest to the goal under the relaxed plan
 heuristic. This can be fast when the heuristic is accurate, but it can return
 longer plans because it does not prefer shorter partial plans:
 
-$$
-g(s)\ \text{is tracked for reconstruction, not priority}
-$$
+$$ g(s)\ \text{is tracked for reconstruction, not priority} $$
 
 The search order is therefore:
 
-$$
-s_{next}=\arg\min_{s\in Open}h_{rp}(s)
-$$
+$$ s_{next}=\arg\min_{s\in Open}h_{rp}(s) $$
 
 Compared with weighted A*, this is the limiting case where path cost has no
 effect on priority:
 
-$$
-\lim_{w\rightarrow\infty}\left(g(s)+w h_{rp}(s)\right)
-\ \text{orders states by}\ h_{rp}(s)
-$$
+$$ \lim_{w\rightarrow\infty}\left(g(s)+w h_{rp}(s)\right) \ \text{orders states by}\ h_{rp}(s) $$
 
 This explains the benchmark pattern: greedy search often expands few states, but
 when the relaxed plan points through a locally attractive detour, it can return a
