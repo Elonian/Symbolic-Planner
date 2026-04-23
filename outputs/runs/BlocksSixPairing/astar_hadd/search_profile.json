@@ -1,0 +1,78 @@
+{
+  "environment": "BlocksSixPairing.txt",
+  "method": "astar_hadd",
+  "source": "python search replay",
+  "solved": true,
+  "expanded_total": 5,
+  "generated_total": 55,
+  "elapsed_ms": 133.36384599097073,
+  "records": [
+    {
+      "expanded": 1,
+      "generated": 6,
+      "frontier": 6,
+      "best_goal_count": 2,
+      "min_h": 8
+    },
+    {
+      "expanded": 2,
+      "generated": 17,
+      "frontier": 16,
+      "best_goal_count": 3,
+      "min_h": 5
+    },
+    {
+      "expanded": 3,
+      "generated": 25,
+      "frontier": 23,
+      "best_goal_count": 4,
+      "min_h": 3
+    },
+    {
+      "expanded": 4,
+      "generated": 42,
+      "frontier": 39,
+      "best_goal_count": 5,
+      "min_h": 1
+    },
+    {
+      "expanded": 5,
+      "generated": 55,
+      "frontier": 51,
+      "best_goal_count": 6,
+      "min_h": 0
+    }
+  ],
+  "steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "expanded_by_step": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    5
+  ],
+  "generated_by_step": [
+    0,
+    17,
+    25,
+    42,
+    55,
+    55
+  ],
+  "actions": [
+    "START",
+    "MoveToTable(D,E)",
+    "Move(A,B,D)",
+    "MoveToTable(E,F)",
+    "Move(B,C,E)",
+    "Move(C,Table,F)"
+  ]
+}

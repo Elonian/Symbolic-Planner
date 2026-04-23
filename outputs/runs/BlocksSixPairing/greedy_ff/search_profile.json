@@ -1,0 +1,99 @@
+{
+  "environment": "BlocksSixPairing.txt",
+  "method": "greedy_ff",
+  "source": "python search replay",
+  "solved": true,
+  "expanded_total": 8,
+  "generated_total": 53,
+  "elapsed_ms": 149.61778197903186,
+  "records": [
+    {
+      "expanded": 1,
+      "generated": 6,
+      "frontier": 6,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 2,
+      "generated": 17,
+      "frontier": 16,
+      "best_goal_count": 3,
+      "min_h": 3
+    },
+    {
+      "expanded": 3,
+      "generated": 25,
+      "frontier": 23,
+      "best_goal_count": 4,
+      "min_h": 2
+    },
+    {
+      "expanded": 4,
+      "generated": 32,
+      "frontier": 29,
+      "best_goal_count": 4,
+      "min_h": 2
+    },
+    {
+      "expanded": 5,
+      "generated": 38,
+      "frontier": 34,
+      "best_goal_count": 5,
+      "min_h": 2
+    },
+    {
+      "expanded": 6,
+      "generated": 42,
+      "frontier": 37,
+      "best_goal_count": 5,
+      "min_h": 2
+    },
+    {
+      "expanded": 7,
+      "generated": 45,
+      "frontier": 39,
+      "best_goal_count": 5,
+      "min_h": 1
+    },
+    {
+      "expanded": 8,
+      "generated": 53,
+      "frontier": 46,
+      "best_goal_count": 6,
+      "min_h": 0
+    }
+  ],
+  "steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "expanded_by_step": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    8
+  ],
+  "generated_by_step": [
+    0,
+    17,
+    25,
+    32,
+    38,
+    53
+  ],
+  "actions": [
+    "START",
+    "MoveToTable(D,E)",
+    "Move(A,B,D)",
+    "MoveToTable(E,F)",
+    "Move(B,C,E)",
+    "Move(C,Table,F)"
+  ]
+}

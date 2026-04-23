@@ -1,0 +1,78 @@
+{
+  "environment": "BlocksTwoStack5.txt",
+  "method": "astar_hadd",
+  "source": "python search replay",
+  "solved": true,
+  "expanded_total": 5,
+  "generated_total": 30,
+  "elapsed_ms": 49.532503995578736,
+  "records": [
+    {
+      "expanded": 1,
+      "generated": 6,
+      "frontier": 6,
+      "best_goal_count": 1,
+      "min_h": 7
+    },
+    {
+      "expanded": 2,
+      "generated": 17,
+      "frontier": 16,
+      "best_goal_count": 2,
+      "min_h": 4
+    },
+    {
+      "expanded": 3,
+      "generated": 24,
+      "frontier": 22,
+      "best_goal_count": 3,
+      "min_h": 3
+    },
+    {
+      "expanded": 4,
+      "generated": 28,
+      "frontier": 25,
+      "best_goal_count": 4,
+      "min_h": 1
+    },
+    {
+      "expanded": 5,
+      "generated": 30,
+      "frontier": 26,
+      "best_goal_count": 5,
+      "min_h": 0
+    }
+  ],
+  "steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "expanded_by_step": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    5
+  ],
+  "generated_by_step": [
+    0,
+    17,
+    24,
+    28,
+    30,
+    30
+  ],
+  "actions": [
+    "START",
+    "MoveToTable(A,B)",
+    "Move(B,C,A)",
+    "Move(C,Table,B)",
+    "Move(D,E,C)",
+    "Move(E,Table,D)"
+  ]
+}

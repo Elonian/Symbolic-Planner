@@ -1,0 +1,1 @@
+Planner: A Star Search [delete-relaxation-hmax] | solved=yes | plan_length=12 | expanded=4284 | generated=8690 | grounded_actions=3993 | time_ms=19704.9

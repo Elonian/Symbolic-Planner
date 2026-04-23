@@ -1,0 +1,19 @@
+Environment: /mntdatalora/src/Symbolic-Planner/envs/BlocksEasy.txt
+***** Environment *****
+
+Symbols: A,B,C,Table,
+Initial conditions: Block(A) Block(B) Block(C) Clear(A) Clear(C) On(A,B) On(B,Table) On(C,Table) 
+Goal conditions: On(A,Table) 
+Actions:
+MoveToTable(b,x)
+Precondition: On(b,x) Clear(b) Block(b) Block(x) 
+Effect: On(b,Table) Clear(x) !On(b,x) 
+
+Move(b,x,y)
+Precondition: On(b,x) Clear(b) Clear(y) Block(b) Block(y) 
+Effect: On(b,y) Clear(x) !On(b,x) !Clear(y) 
+
+***** Environment Created! *****
+
+Plan: 
+MoveToTable(A,B) 

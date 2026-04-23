@@ -1,0 +1,4 @@
+MoveToTable(A,B)
+Move(B,C,A)
+Move(C,D,B)
+Move(D,Table,C)

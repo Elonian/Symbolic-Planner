@@ -1,0 +1,34 @@
+{
+  "environment": "BlocksEasy.txt",
+  "method": "optimal",
+  "source": "python search replay",
+  "solved": true,
+  "expanded_total": 1,
+  "generated_total": 5,
+  "elapsed_ms": 3.8830889970995486,
+  "records": [
+    {
+      "expanded": 1,
+      "generated": 5,
+      "frontier": 5,
+      "best_goal_count": 1,
+      "min_h": 0
+    }
+  ],
+  "steps": [
+    0,
+    1
+  ],
+  "expanded_by_step": [
+    0,
+    1
+  ],
+  "generated_by_step": [
+    0,
+    5
+  ],
+  "actions": [
+    "START",
+    "MoveToTable(A,B)"
+  ]
+}

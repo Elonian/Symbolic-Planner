@@ -1,0 +1,1 @@
+Planner: A Star Search [delete-relaxation-relaxed-plan] | solved=yes | plan_length=24 | expanded=304 | generated=376 | grounded_actions=225 | time_ms=264.443

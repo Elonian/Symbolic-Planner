@@ -1,0 +1,1206 @@
+{
+  "valid": true,
+  "errors": [],
+  "missing_goals": [],
+  "final_state": [
+    "At(Q,A)",
+    "At(R,A)",
+    "EmptyTank(Q)",
+    "ExtThree(F)",
+    "Fire(F)",
+    "HighCharge(Q)",
+    "Loc(A)",
+    "Loc(B)",
+    "Loc(C)",
+    "Loc(D)",
+    "Loc(E)",
+    "Loc(F)",
+    "Loc(W)",
+    "OnRob(Q)",
+    "Quad(Q)",
+    "Rob(R)"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "action": "START",
+      "valid": true,
+      "preconditions": [],
+      "effects": [],
+      "missing_preconditions": [],
+      "added": [],
+      "deleted": [],
+      "goals_satisfied": [
+        "At(R,A)",
+        "EmptyTank(Q)",
+        "HighCharge(Q)"
+      ],
+      "goal_count": 3,
+      "state": [
+        "At(Q,B)",
+        "At(R,A)",
+        "EmptyTank(Q)",
+        "Fire(F)",
+        "HighCharge(Q)",
+        "InAir(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 1,
+      "action": "MoveToLoc(A,B)",
+      "valid": true,
+      "preconditions": [
+        "Loc(A)",
+        "Loc(B)",
+        "At(R,A)",
+        "InAir(Q)"
+      ],
+      "effects": [
+        "At(R,B)",
+        "!At(R,A)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R,B)"
+      ],
+      "deleted": [
+        "At(R,A)"
+      ],
+      "goals_satisfied": [
+        "EmptyTank(Q)",
+        "HighCharge(Q)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "At(Q,B)",
+        "At(R,B)",
+        "EmptyTank(Q)",
+        "Fire(F)",
+        "HighCharge(Q)",
+        "InAir(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 2,
+      "action": "LandOnRob(B)",
+      "valid": true,
+      "preconditions": [
+        "Loc(B)",
+        "At(R,B)",
+        "At(Q,B)",
+        "InAir(Q)"
+      ],
+      "effects": [
+        "!InAir(Q)",
+        "OnRob(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "OnRob(Q)"
+      ],
+      "deleted": [
+        "InAir(Q)"
+      ],
+      "goals_satisfied": [
+        "EmptyTank(Q)",
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 3,
+      "state": [
+        "At(Q,B)",
+        "At(R,B)",
+        "EmptyTank(Q)",
+        "Fire(F)",
+        "HighCharge(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 3,
+      "action": "MoveTogether(B,W)",
+      "valid": true,
+      "preconditions": [
+        "Loc(B)",
+        "Loc(W)",
+        "At(R,B)",
+        "At(Q,B)",
+        "OnRob(Q)"
+      ],
+      "effects": [
+        "!At(R,B)",
+        "!At(Q,B)",
+        "At(R,W)",
+        "At(Q,W)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(Q,W)",
+        "At(R,W)"
+      ],
+      "deleted": [
+        "At(Q,B)",
+        "At(R,B)"
+      ],
+      "goals_satisfied": [
+        "EmptyTank(Q)",
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 3,
+      "state": [
+        "At(Q,W)",
+        "At(R,W)",
+        "EmptyTank(Q)",
+        "Fire(F)",
+        "HighCharge(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 4,
+      "action": "FillWater(Q)",
+      "valid": true,
+      "preconditions": [
+        "Quad(Q)",
+        "OnRob(Q)",
+        "EmptyTank(Q)",
+        "At(R,W)",
+        "At(Q,W)"
+      ],
+      "effects": [
+        "!EmptyTank(Q)",
+        "FullTank(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "FullTank(Q)"
+      ],
+      "deleted": [
+        "EmptyTank(Q)"
+      ],
+      "goals_satisfied": [
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "At(Q,W)",
+        "At(R,W)",
+        "Fire(F)",
+        "FullTank(Q)",
+        "HighCharge(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 5,
+      "action": "MoveTogether(W,F)",
+      "valid": true,
+      "preconditions": [
+        "Loc(W)",
+        "Loc(F)",
+        "At(R,W)",
+        "At(Q,W)",
+        "OnRob(Q)"
+      ],
+      "effects": [
+        "!At(R,W)",
+        "!At(Q,W)",
+        "At(R,F)",
+        "At(Q,F)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(Q,F)",
+        "At(R,F)"
+      ],
+      "deleted": [
+        "At(Q,W)",
+        "At(R,W)"
+      ],
+      "goals_satisfied": [
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "At(Q,F)",
+        "At(R,F)",
+        "Fire(F)",
+        "FullTank(Q)",
+        "HighCharge(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 6,
+      "action": "TakeOffFromRob(F)",
+      "valid": true,
+      "preconditions": [
+        "Loc(F)",
+        "At(R,F)",
+        "At(Q,F)",
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "effects": [
+        "InAir(Q)",
+        "!OnRob(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "InAir(Q)"
+      ],
+      "deleted": [
+        "OnRob(Q)"
+      ],
+      "goals_satisfied": [
+        "HighCharge(Q)"
+      ],
+      "goal_count": 1,
+      "state": [
+        "At(Q,F)",
+        "At(R,F)",
+        "Fire(F)",
+        "FullTank(Q)",
+        "HighCharge(Q)",
+        "InAir(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 7,
+      "action": "PourOnce(F)",
+      "valid": true,
+      "preconditions": [
+        "Fire(F)",
+        "At(Q,F)",
+        "InAir(Q)",
+        "FullTank(Q)",
+        "HighCharge(Q)"
+      ],
+      "effects": [
+        "ExtOne(F)",
+        "EmptyTank(Q)",
+        "!FullTank(Q)",
+        "LowCharge(Q)",
+        "!HighCharge(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "EmptyTank(Q)",
+        "ExtOne(F)",
+        "LowCharge(Q)"
+      ],
+      "deleted": [
+        "FullTank(Q)",
+        "HighCharge(Q)"
+      ],
+      "goals_satisfied": [
+        "EmptyTank(Q)"
+      ],
+      "goal_count": 1,
+      "state": [
+        "At(Q,F)",
+        "At(R,F)",
+        "EmptyTank(Q)",
+        "ExtOne(F)",
+        "Fire(F)",
+        "InAir(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "LowCharge(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 8,
+      "action": "LandOnRob(F)",
+      "valid": true,
+      "preconditions": [
+        "Loc(F)",
+        "At(R,F)",
+        "At(Q,F)",
+        "InAir(Q)"
+      ],
+      "effects": [
+        "!InAir(Q)",
+        "OnRob(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "OnRob(Q)"
+      ],
+      "deleted": [
+        "InAir(Q)"
+      ],
+      "goals_satisfied": [
+        "EmptyTank(Q)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "At(Q,F)",
+        "At(R,F)",
+        "EmptyTank(Q)",
+        "ExtOne(F)",
+        "Fire(F)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "LowCharge(Q)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 9,
+      "action": "Charge(Q)",
+      "valid": true,
+      "preconditions": [
+        "Quad(Q)",
+        "LowCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "effects": [
+        "!LowCharge(Q)",
+        "HighCharge(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "HighCharge(Q)"
+      ],
+      "deleted": [
+        "LowCharge(Q)"
+      ],
+      "goals_satisfied": [
+        "EmptyTank(Q)",
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 3,
+      "state": [
+        "At(Q,F)",
+        "At(R,F)",
+        "EmptyTank(Q)",
+        "ExtOne(F)",
+        "Fire(F)",
+        "HighCharge(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 10,
+      "action": "MoveTogether(F,W)",
+      "valid": true,
+      "preconditions": [
+        "Loc(F)",
+        "Loc(W)",
+        "At(R,F)",
+        "At(Q,F)",
+        "OnRob(Q)"
+      ],
+      "effects": [
+        "!At(R,F)",
+        "!At(Q,F)",
+        "At(R,W)",
+        "At(Q,W)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(Q,W)",
+        "At(R,W)"
+      ],
+      "deleted": [
+        "At(Q,F)",
+        "At(R,F)"
+      ],
+      "goals_satisfied": [
+        "EmptyTank(Q)",
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 3,
+      "state": [
+        "At(Q,W)",
+        "At(R,W)",
+        "EmptyTank(Q)",
+        "ExtOne(F)",
+        "Fire(F)",
+        "HighCharge(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 11,
+      "action": "FillWater(Q)",
+      "valid": true,
+      "preconditions": [
+        "Quad(Q)",
+        "OnRob(Q)",
+        "EmptyTank(Q)",
+        "At(R,W)",
+        "At(Q,W)"
+      ],
+      "effects": [
+        "!EmptyTank(Q)",
+        "FullTank(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "FullTank(Q)"
+      ],
+      "deleted": [
+        "EmptyTank(Q)"
+      ],
+      "goals_satisfied": [
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "At(Q,W)",
+        "At(R,W)",
+        "ExtOne(F)",
+        "Fire(F)",
+        "FullTank(Q)",
+        "HighCharge(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 12,
+      "action": "MoveTogether(W,F)",
+      "valid": true,
+      "preconditions": [
+        "Loc(W)",
+        "Loc(F)",
+        "At(R,W)",
+        "At(Q,W)",
+        "OnRob(Q)"
+      ],
+      "effects": [
+        "!At(R,W)",
+        "!At(Q,W)",
+        "At(R,F)",
+        "At(Q,F)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(Q,F)",
+        "At(R,F)"
+      ],
+      "deleted": [
+        "At(Q,W)",
+        "At(R,W)"
+      ],
+      "goals_satisfied": [
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "At(Q,F)",
+        "At(R,F)",
+        "ExtOne(F)",
+        "Fire(F)",
+        "FullTank(Q)",
+        "HighCharge(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 13,
+      "action": "TakeOffFromRob(F)",
+      "valid": true,
+      "preconditions": [
+        "Loc(F)",
+        "At(R,F)",
+        "At(Q,F)",
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "effects": [
+        "InAir(Q)",
+        "!OnRob(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "InAir(Q)"
+      ],
+      "deleted": [
+        "OnRob(Q)"
+      ],
+      "goals_satisfied": [
+        "HighCharge(Q)"
+      ],
+      "goal_count": 1,
+      "state": [
+        "At(Q,F)",
+        "At(R,F)",
+        "ExtOne(F)",
+        "Fire(F)",
+        "FullTank(Q)",
+        "HighCharge(Q)",
+        "InAir(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 14,
+      "action": "PourTwice(F)",
+      "valid": true,
+      "preconditions": [
+        "Fire(F)",
+        "At(Q,F)",
+        "InAir(Q)",
+        "FullTank(Q)",
+        "HighCharge(Q)",
+        "ExtOne(F)"
+      ],
+      "effects": [
+        "!ExtOne(F)",
+        "ExtTwo(F)",
+        "EmptyTank(Q)",
+        "!FullTank(Q)",
+        "LowCharge(Q)",
+        "!HighCharge(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "EmptyTank(Q)",
+        "ExtTwo(F)",
+        "LowCharge(Q)"
+      ],
+      "deleted": [
+        "ExtOne(F)",
+        "FullTank(Q)",
+        "HighCharge(Q)"
+      ],
+      "goals_satisfied": [
+        "EmptyTank(Q)"
+      ],
+      "goal_count": 1,
+      "state": [
+        "At(Q,F)",
+        "At(R,F)",
+        "EmptyTank(Q)",
+        "ExtTwo(F)",
+        "Fire(F)",
+        "InAir(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "LowCharge(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 15,
+      "action": "LandOnRob(F)",
+      "valid": true,
+      "preconditions": [
+        "Loc(F)",
+        "At(R,F)",
+        "At(Q,F)",
+        "InAir(Q)"
+      ],
+      "effects": [
+        "!InAir(Q)",
+        "OnRob(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "OnRob(Q)"
+      ],
+      "deleted": [
+        "InAir(Q)"
+      ],
+      "goals_satisfied": [
+        "EmptyTank(Q)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "At(Q,F)",
+        "At(R,F)",
+        "EmptyTank(Q)",
+        "ExtTwo(F)",
+        "Fire(F)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "LowCharge(Q)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 16,
+      "action": "Charge(Q)",
+      "valid": true,
+      "preconditions": [
+        "Quad(Q)",
+        "LowCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "effects": [
+        "!LowCharge(Q)",
+        "HighCharge(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "HighCharge(Q)"
+      ],
+      "deleted": [
+        "LowCharge(Q)"
+      ],
+      "goals_satisfied": [
+        "EmptyTank(Q)",
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 3,
+      "state": [
+        "At(Q,F)",
+        "At(R,F)",
+        "EmptyTank(Q)",
+        "ExtTwo(F)",
+        "Fire(F)",
+        "HighCharge(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 17,
+      "action": "MoveTogether(F,W)",
+      "valid": true,
+      "preconditions": [
+        "Loc(F)",
+        "Loc(W)",
+        "At(R,F)",
+        "At(Q,F)",
+        "OnRob(Q)"
+      ],
+      "effects": [
+        "!At(R,F)",
+        "!At(Q,F)",
+        "At(R,W)",
+        "At(Q,W)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(Q,W)",
+        "At(R,W)"
+      ],
+      "deleted": [
+        "At(Q,F)",
+        "At(R,F)"
+      ],
+      "goals_satisfied": [
+        "EmptyTank(Q)",
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 3,
+      "state": [
+        "At(Q,W)",
+        "At(R,W)",
+        "EmptyTank(Q)",
+        "ExtTwo(F)",
+        "Fire(F)",
+        "HighCharge(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 18,
+      "action": "FillWater(Q)",
+      "valid": true,
+      "preconditions": [
+        "Quad(Q)",
+        "OnRob(Q)",
+        "EmptyTank(Q)",
+        "At(R,W)",
+        "At(Q,W)"
+      ],
+      "effects": [
+        "!EmptyTank(Q)",
+        "FullTank(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "FullTank(Q)"
+      ],
+      "deleted": [
+        "EmptyTank(Q)"
+      ],
+      "goals_satisfied": [
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "At(Q,W)",
+        "At(R,W)",
+        "ExtTwo(F)",
+        "Fire(F)",
+        "FullTank(Q)",
+        "HighCharge(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 19,
+      "action": "MoveTogether(W,F)",
+      "valid": true,
+      "preconditions": [
+        "Loc(W)",
+        "Loc(F)",
+        "At(R,W)",
+        "At(Q,W)",
+        "OnRob(Q)"
+      ],
+      "effects": [
+        "!At(R,W)",
+        "!At(Q,W)",
+        "At(R,F)",
+        "At(Q,F)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(Q,F)",
+        "At(R,F)"
+      ],
+      "deleted": [
+        "At(Q,W)",
+        "At(R,W)"
+      ],
+      "goals_satisfied": [
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "At(Q,F)",
+        "At(R,F)",
+        "ExtTwo(F)",
+        "Fire(F)",
+        "FullTank(Q)",
+        "HighCharge(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 20,
+      "action": "TakeOffFromRob(F)",
+      "valid": true,
+      "preconditions": [
+        "Loc(F)",
+        "At(R,F)",
+        "At(Q,F)",
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "effects": [
+        "InAir(Q)",
+        "!OnRob(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "InAir(Q)"
+      ],
+      "deleted": [
+        "OnRob(Q)"
+      ],
+      "goals_satisfied": [
+        "HighCharge(Q)"
+      ],
+      "goal_count": 1,
+      "state": [
+        "At(Q,F)",
+        "At(R,F)",
+        "ExtTwo(F)",
+        "Fire(F)",
+        "FullTank(Q)",
+        "HighCharge(Q)",
+        "InAir(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 21,
+      "action": "PourThrice(F)",
+      "valid": true,
+      "preconditions": [
+        "Fire(F)",
+        "At(Q,F)",
+        "InAir(Q)",
+        "FullTank(Q)",
+        "HighCharge(Q)",
+        "ExtTwo(F)"
+      ],
+      "effects": [
+        "!ExtTwo(F)",
+        "ExtThree(F)",
+        "EmptyTank(Q)",
+        "!FullTank(Q)",
+        "LowCharge(Q)",
+        "!HighCharge(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "EmptyTank(Q)",
+        "ExtThree(F)",
+        "LowCharge(Q)"
+      ],
+      "deleted": [
+        "ExtTwo(F)",
+        "FullTank(Q)",
+        "HighCharge(Q)"
+      ],
+      "goals_satisfied": [
+        "EmptyTank(Q)",
+        "ExtThree(F)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "At(Q,F)",
+        "At(R,F)",
+        "EmptyTank(Q)",
+        "ExtThree(F)",
+        "Fire(F)",
+        "InAir(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "LowCharge(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 22,
+      "action": "LandOnRob(F)",
+      "valid": true,
+      "preconditions": [
+        "Loc(F)",
+        "At(R,F)",
+        "At(Q,F)",
+        "InAir(Q)"
+      ],
+      "effects": [
+        "!InAir(Q)",
+        "OnRob(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "OnRob(Q)"
+      ],
+      "deleted": [
+        "InAir(Q)"
+      ],
+      "goals_satisfied": [
+        "EmptyTank(Q)",
+        "ExtThree(F)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 3,
+      "state": [
+        "At(Q,F)",
+        "At(R,F)",
+        "EmptyTank(Q)",
+        "ExtThree(F)",
+        "Fire(F)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "LowCharge(Q)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 23,
+      "action": "MoveTogether(F,A)",
+      "valid": true,
+      "preconditions": [
+        "Loc(F)",
+        "Loc(A)",
+        "At(R,F)",
+        "At(Q,F)",
+        "OnRob(Q)"
+      ],
+      "effects": [
+        "!At(R,F)",
+        "!At(Q,F)",
+        "At(R,A)",
+        "At(Q,A)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(Q,A)",
+        "At(R,A)"
+      ],
+      "deleted": [
+        "At(Q,F)",
+        "At(R,F)"
+      ],
+      "goals_satisfied": [
+        "At(Q,A)",
+        "At(R,A)",
+        "EmptyTank(Q)",
+        "ExtThree(F)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 5,
+      "state": [
+        "At(Q,A)",
+        "At(R,A)",
+        "EmptyTank(Q)",
+        "ExtThree(F)",
+        "Fire(F)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "LowCharge(Q)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    },
+    {
+      "step": 24,
+      "action": "Charge(Q)",
+      "valid": true,
+      "preconditions": [
+        "Quad(Q)",
+        "LowCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "effects": [
+        "!LowCharge(Q)",
+        "HighCharge(Q)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "HighCharge(Q)"
+      ],
+      "deleted": [
+        "LowCharge(Q)"
+      ],
+      "goals_satisfied": [
+        "At(Q,A)",
+        "At(R,A)",
+        "EmptyTank(Q)",
+        "ExtThree(F)",
+        "HighCharge(Q)",
+        "OnRob(Q)"
+      ],
+      "goal_count": 6,
+      "state": [
+        "At(Q,A)",
+        "At(R,A)",
+        "EmptyTank(Q)",
+        "ExtThree(F)",
+        "Fire(F)",
+        "HighCharge(Q)",
+        "Loc(A)",
+        "Loc(B)",
+        "Loc(C)",
+        "Loc(D)",
+        "Loc(E)",
+        "Loc(F)",
+        "Loc(W)",
+        "OnRob(Q)",
+        "Quad(Q)",
+        "Rob(R)"
+      ]
+    }
+  ]
+}

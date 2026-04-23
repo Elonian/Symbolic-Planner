@@ -1,0 +1,693 @@
+{
+  "environment": "FireExtinguisherReturn.txt",
+  "method": "strong",
+  "source": "python search replay",
+  "solved": true,
+  "expanded_total": 82,
+  "generated_total": 246,
+  "elapsed_ms": 370.55535701802,
+  "records": [
+    {
+      "expanded": 1,
+      "generated": 6,
+      "frontier": 6,
+      "best_goal_count": 3,
+      "min_h": 28
+    },
+    {
+      "expanded": 2,
+      "generated": 7,
+      "frontier": 6,
+      "best_goal_count": 3,
+      "min_h": 20
+    },
+    {
+      "expanded": 3,
+      "generated": 13,
+      "frontier": 11,
+      "best_goal_count": 5,
+      "min_h": 14
+    },
+    {
+      "expanded": 4,
+      "generated": 15,
+      "frontier": 12,
+      "best_goal_count": 5,
+      "min_h": 14
+    },
+    {
+      "expanded": 5,
+      "generated": 22,
+      "frontier": 18,
+      "best_goal_count": 5,
+      "min_h": 10
+    },
+    {
+      "expanded": 6,
+      "generated": 23,
+      "frontier": 18,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 7,
+      "generated": 30,
+      "frontier": 24,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 8,
+      "generated": 31,
+      "frontier": 24,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 9,
+      "generated": 32,
+      "frontier": 24,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 10,
+      "generated": 33,
+      "frontier": 24,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 11,
+      "generated": 34,
+      "frontier": 24,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 12,
+      "generated": 35,
+      "frontier": 24,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 13,
+      "generated": 36,
+      "frontier": 24,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 14,
+      "generated": 37,
+      "frontier": 24,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 15,
+      "generated": 43,
+      "frontier": 29,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 16,
+      "generated": 44,
+      "frontier": 29,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 17,
+      "generated": 45,
+      "frontier": 29,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 18,
+      "generated": 46,
+      "frontier": 29,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 19,
+      "generated": 47,
+      "frontier": 29,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 20,
+      "generated": 48,
+      "frontier": 29,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 21,
+      "generated": 54,
+      "frontier": 34,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 22,
+      "generated": 55,
+      "frontier": 34,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 23,
+      "generated": 61,
+      "frontier": 39,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 24,
+      "generated": 67,
+      "frontier": 44,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 25,
+      "generated": 73,
+      "frontier": 49,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 26,
+      "generated": 79,
+      "frontier": 54,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 27,
+      "generated": 85,
+      "frontier": 59,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 28,
+      "generated": 86,
+      "frontier": 59,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 29,
+      "generated": 87,
+      "frontier": 59,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 30,
+      "generated": 88,
+      "frontier": 59,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 31,
+      "generated": 94,
+      "frontier": 64,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 32,
+      "generated": 95,
+      "frontier": 64,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 33,
+      "generated": 102,
+      "frontier": 70,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 34,
+      "generated": 109,
+      "frontier": 76,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 35,
+      "generated": 111,
+      "frontier": 77,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 36,
+      "generated": 118,
+      "frontier": 83,
+      "best_goal_count": 5,
+      "min_h": 8
+    },
+    {
+      "expanded": 37,
+      "generated": 119,
+      "frontier": 83,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 38,
+      "generated": 126,
+      "frontier": 89,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 39,
+      "generated": 127,
+      "frontier": 89,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 40,
+      "generated": 128,
+      "frontier": 89,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 41,
+      "generated": 129,
+      "frontier": 89,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 42,
+      "generated": 135,
+      "frontier": 94,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 43,
+      "generated": 136,
+      "frontier": 94,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 44,
+      "generated": 137,
+      "frontier": 94,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 45,
+      "generated": 138,
+      "frontier": 94,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 46,
+      "generated": 139,
+      "frontier": 94,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 47,
+      "generated": 140,
+      "frontier": 94,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 48,
+      "generated": 141,
+      "frontier": 94,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 49,
+      "generated": 142,
+      "frontier": 94,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 50,
+      "generated": 143,
+      "frontier": 94,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 51,
+      "generated": 144,
+      "frontier": 94,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 52,
+      "generated": 145,
+      "frontier": 94,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 53,
+      "generated": 146,
+      "frontier": 94,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 54,
+      "generated": 147,
+      "frontier": 94,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 55,
+      "generated": 148,
+      "frontier": 94,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 56,
+      "generated": 149,
+      "frontier": 94,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 57,
+      "generated": 155,
+      "frontier": 99,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 58,
+      "generated": 161,
+      "frontier": 104,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 59,
+      "generated": 167,
+      "frontier": 109,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 60,
+      "generated": 173,
+      "frontier": 114,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 61,
+      "generated": 179,
+      "frontier": 119,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 62,
+      "generated": 185,
+      "frontier": 124,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 63,
+      "generated": 191,
+      "frontier": 129,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 64,
+      "generated": 191,
+      "frontier": 128,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 65,
+      "generated": 192,
+      "frontier": 128,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 66,
+      "generated": 199,
+      "frontier": 134,
+      "best_goal_count": 5,
+      "min_h": 7
+    },
+    {
+      "expanded": 67,
+      "generated": 206,
+      "frontier": 140,
+      "best_goal_count": 5,
+      "min_h": 6
+    },
+    {
+      "expanded": 68,
+      "generated": 207,
+      "frontier": 140,
+      "best_goal_count": 5,
+      "min_h": 6
+    },
+    {
+      "expanded": 69,
+      "generated": 209,
+      "frontier": 141,
+      "best_goal_count": 5,
+      "min_h": 6
+    },
+    {
+      "expanded": 70,
+      "generated": 210,
+      "frontier": 141,
+      "best_goal_count": 5,
+      "min_h": 6
+    },
+    {
+      "expanded": 71,
+      "generated": 211,
+      "frontier": 141,
+      "best_goal_count": 5,
+      "min_h": 6
+    },
+    {
+      "expanded": 72,
+      "generated": 212,
+      "frontier": 141,
+      "best_goal_count": 5,
+      "min_h": 6
+    },
+    {
+      "expanded": 73,
+      "generated": 213,
+      "frontier": 141,
+      "best_goal_count": 5,
+      "min_h": 6
+    },
+    {
+      "expanded": 74,
+      "generated": 213,
+      "frontier": 140,
+      "best_goal_count": 5,
+      "min_h": 6
+    },
+    {
+      "expanded": 75,
+      "generated": 214,
+      "frontier": 140,
+      "best_goal_count": 5,
+      "min_h": 6
+    },
+    {
+      "expanded": 76,
+      "generated": 221,
+      "frontier": 146,
+      "best_goal_count": 5,
+      "min_h": 6
+    },
+    {
+      "expanded": 77,
+      "generated": 222,
+      "frontier": 146,
+      "best_goal_count": 5,
+      "min_h": 6
+    },
+    {
+      "expanded": 78,
+      "generated": 223,
+      "frontier": 146,
+      "best_goal_count": 5,
+      "min_h": 6
+    },
+    {
+      "expanded": 79,
+      "generated": 231,
+      "frontier": 153,
+      "best_goal_count": 5,
+      "min_h": 6
+    },
+    {
+      "expanded": 80,
+      "generated": 238,
+      "frontier": 159,
+      "best_goal_count": 5,
+      "min_h": 3
+    },
+    {
+      "expanded": 81,
+      "generated": 245,
+      "frontier": 165,
+      "best_goal_count": 5,
+      "min_h": 1
+    },
+    {
+      "expanded": 82,
+      "generated": 246,
+      "frontier": 165,
+      "best_goal_count": 6,
+      "min_h": 0
+    }
+  ],
+  "steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "expanded_by_step": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    65,
+    66,
+    67,
+    69,
+    76,
+    78,
+    79,
+    80,
+    81,
+    82,
+    82
+  ],
+  "generated_by_step": [
+    0,
+    7,
+    13,
+    15,
+    22,
+    23,
+    30,
+    95,
+    102,
+    109,
+    111,
+    118,
+    119,
+    126,
+    192,
+    199,
+    206,
+    209,
+    221,
+    223,
+    231,
+    238,
+    245,
+    246,
+    246
+  ],
+  "actions": [
+    "START",
+    "MoveToLoc(A,B)",
+    "LandOnRob(B)",
+    "MoveTogether(B,W)",
+    "FillWater(Q)",
+    "MoveTogether(W,F)",
+    "TakeOffFromRob(F)",
+    "PourOnce(F)",
+    "LandOnRob(F)",
+    "Charge(Q)",
+    "MoveTogether(F,W)",
+    "FillWater(Q)",
+    "MoveTogether(W,F)",
+    "TakeOffFromRob(F)",
+    "PourTwice(F)",
+    "LandOnRob(F)",
+    "Charge(Q)",
+    "MoveTogether(F,W)",
+    "FillWater(Q)",
+    "MoveTogether(W,F)",
+    "TakeOffFromRob(F)",
+    "PourThrice(F)",
+    "LandOnRob(F)",
+    "MoveTogether(F,A)",
+    "Charge(Q)"
+  ]
+}

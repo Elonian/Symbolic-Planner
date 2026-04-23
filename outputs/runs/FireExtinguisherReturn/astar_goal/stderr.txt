@@ -1,0 +1,1 @@
+Planner: A Star Search [unsatisfied-goals] | solved=yes | plan_length=24 | expanded=352 | generated=420 | grounded_actions=225 | time_ms=44.6924

@@ -1,0 +1,3 @@
+/mntdatalora/src/Symbolic-Planner/build/CMakeFiles/planner.dir
+/mntdatalora/src/Symbolic-Planner/build/CMakeFiles/edit_cache.dir
+/mntdatalora/src/Symbolic-Planner/build/CMakeFiles/rebuild_cache.dir

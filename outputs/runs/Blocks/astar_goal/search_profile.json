@@ -1,0 +1,70 @@
+{
+  "environment": "Blocks.txt",
+  "method": "astar_goal",
+  "source": "python search replay",
+  "solved": true,
+  "expanded_total": 5,
+  "generated_total": 19,
+  "elapsed_ms": 2.559155982453376,
+  "records": [
+    {
+      "expanded": 1,
+      "generated": 5,
+      "frontier": 5,
+      "best_goal_count": 1,
+      "min_h": 2
+    },
+    {
+      "expanded": 2,
+      "generated": 6,
+      "frontier": 5,
+      "best_goal_count": 1,
+      "min_h": 2
+    },
+    {
+      "expanded": 3,
+      "generated": 14,
+      "frontier": 12,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 4,
+      "generated": 17,
+      "frontier": 14,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 5,
+      "generated": 19,
+      "frontier": 15,
+      "best_goal_count": 3,
+      "min_h": 0
+    }
+  ],
+  "steps": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "expanded_by_step": [
+    0,
+    3,
+    5,
+    5
+  ],
+  "generated_by_step": [
+    0,
+    14,
+    19,
+    19
+  ],
+  "actions": [
+    "START",
+    "MoveToTable(A,B)",
+    "Move(C,Table,A)",
+    "Move(B,Table,C)"
+  ]
+}

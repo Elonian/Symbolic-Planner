@@ -1,0 +1,1 @@
+Planner: Weighted A Star Search [w=5, delete-relaxation-relaxed-plan] | solved=yes | plan_length=1 | expanded=1 | generated=5 | grounded_actions=80 | time_ms=0.801186

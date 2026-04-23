@@ -1,0 +1,629 @@
+{
+  "valid": true,
+  "errors": [],
+  "missing_goals": [],
+  "final_state": [
+    "Assigned(R1,PartA)",
+    "Assigned(R2,PartB)",
+    "Assigned(R3,PartC)",
+    "At(R1,Pack)",
+    "At(R2,Quality)",
+    "At(R3,Pack)",
+    "Empty(R1)",
+    "Empty(R2)",
+    "Empty(R3)",
+    "Item(PartA)",
+    "Item(PartB)",
+    "Item(PartC)",
+    "ItemAt(PartA,Pack)",
+    "ItemAt(PartB,Quality)",
+    "ItemAt(PartC,Pack)",
+    "Loc(Aisle1)",
+    "Loc(Aisle2)",
+    "Loc(Dock)",
+    "Loc(Pack)",
+    "Loc(Quality)",
+    "Robot(R1)",
+    "Robot(R2)",
+    "Robot(R3)"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "action": "START",
+      "valid": true,
+      "preconditions": [],
+      "effects": [],
+      "missing_preconditions": [],
+      "added": [],
+      "deleted": [],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,PartA)",
+        "Assigned(R2,PartB)",
+        "Assigned(R3,PartC)",
+        "At(R1,Dock)",
+        "At(R2,Dock)",
+        "At(R3,Dock)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(PartA)",
+        "Item(PartB)",
+        "Item(PartC)",
+        "ItemAt(PartA,Aisle1)",
+        "ItemAt(PartB,Aisle2)",
+        "ItemAt(PartC,Dock)",
+        "Loc(Aisle1)",
+        "Loc(Aisle2)",
+        "Loc(Dock)",
+        "Loc(Pack)",
+        "Loc(Quality)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 1,
+      "action": "Drive(R1,Dock,Aisle1)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R1)",
+        "Loc(Dock)",
+        "Loc(Aisle1)",
+        "At(R1,Dock)"
+      ],
+      "effects": [
+        "At(R1,Aisle1)",
+        "!At(R1,Dock)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R1,Aisle1)"
+      ],
+      "deleted": [
+        "At(R1,Dock)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,PartA)",
+        "Assigned(R2,PartB)",
+        "Assigned(R3,PartC)",
+        "At(R1,Aisle1)",
+        "At(R2,Dock)",
+        "At(R3,Dock)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(PartA)",
+        "Item(PartB)",
+        "Item(PartC)",
+        "ItemAt(PartA,Aisle1)",
+        "ItemAt(PartB,Aisle2)",
+        "ItemAt(PartC,Dock)",
+        "Loc(Aisle1)",
+        "Loc(Aisle2)",
+        "Loc(Dock)",
+        "Loc(Pack)",
+        "Loc(Quality)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 2,
+      "action": "Drive(R2,Dock,Aisle2)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R2)",
+        "Loc(Dock)",
+        "Loc(Aisle2)",
+        "At(R2,Dock)"
+      ],
+      "effects": [
+        "At(R2,Aisle2)",
+        "!At(R2,Dock)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R2,Aisle2)"
+      ],
+      "deleted": [
+        "At(R2,Dock)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,PartA)",
+        "Assigned(R2,PartB)",
+        "Assigned(R3,PartC)",
+        "At(R1,Aisle1)",
+        "At(R2,Aisle2)",
+        "At(R3,Dock)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(PartA)",
+        "Item(PartB)",
+        "Item(PartC)",
+        "ItemAt(PartA,Aisle1)",
+        "ItemAt(PartB,Aisle2)",
+        "ItemAt(PartC,Dock)",
+        "Loc(Aisle1)",
+        "Loc(Aisle2)",
+        "Loc(Dock)",
+        "Loc(Pack)",
+        "Loc(Quality)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 3,
+      "action": "Pickup(R1,PartA,Aisle1)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R1)",
+        "Item(PartA)",
+        "Loc(Aisle1)",
+        "Assigned(R1,PartA)",
+        "At(R1,Aisle1)",
+        "ItemAt(PartA,Aisle1)",
+        "Empty(R1)"
+      ],
+      "effects": [
+        "Carrying(R1,PartA)",
+        "!ItemAt(PartA,Aisle1)",
+        "!Empty(R1)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Carrying(R1,PartA)"
+      ],
+      "deleted": [
+        "Empty(R1)",
+        "ItemAt(PartA,Aisle1)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,PartA)",
+        "Assigned(R2,PartB)",
+        "Assigned(R3,PartC)",
+        "At(R1,Aisle1)",
+        "At(R2,Aisle2)",
+        "At(R3,Dock)",
+        "Carrying(R1,PartA)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(PartA)",
+        "Item(PartB)",
+        "Item(PartC)",
+        "ItemAt(PartB,Aisle2)",
+        "ItemAt(PartC,Dock)",
+        "Loc(Aisle1)",
+        "Loc(Aisle2)",
+        "Loc(Dock)",
+        "Loc(Pack)",
+        "Loc(Quality)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 4,
+      "action": "Drive(R1,Aisle1,Pack)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R1)",
+        "Loc(Aisle1)",
+        "Loc(Pack)",
+        "At(R1,Aisle1)"
+      ],
+      "effects": [
+        "At(R1,Pack)",
+        "!At(R1,Aisle1)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R1,Pack)"
+      ],
+      "deleted": [
+        "At(R1,Aisle1)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,PartA)",
+        "Assigned(R2,PartB)",
+        "Assigned(R3,PartC)",
+        "At(R1,Pack)",
+        "At(R2,Aisle2)",
+        "At(R3,Dock)",
+        "Carrying(R1,PartA)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(PartA)",
+        "Item(PartB)",
+        "Item(PartC)",
+        "ItemAt(PartB,Aisle2)",
+        "ItemAt(PartC,Dock)",
+        "Loc(Aisle1)",
+        "Loc(Aisle2)",
+        "Loc(Dock)",
+        "Loc(Pack)",
+        "Loc(Quality)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 5,
+      "action": "Pickup(R2,PartB,Aisle2)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R2)",
+        "Item(PartB)",
+        "Loc(Aisle2)",
+        "Assigned(R2,PartB)",
+        "At(R2,Aisle2)",
+        "ItemAt(PartB,Aisle2)",
+        "Empty(R2)"
+      ],
+      "effects": [
+        "Carrying(R2,PartB)",
+        "!ItemAt(PartB,Aisle2)",
+        "!Empty(R2)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Carrying(R2,PartB)"
+      ],
+      "deleted": [
+        "Empty(R2)",
+        "ItemAt(PartB,Aisle2)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,PartA)",
+        "Assigned(R2,PartB)",
+        "Assigned(R3,PartC)",
+        "At(R1,Pack)",
+        "At(R2,Aisle2)",
+        "At(R3,Dock)",
+        "Carrying(R1,PartA)",
+        "Carrying(R2,PartB)",
+        "Empty(R3)",
+        "Item(PartA)",
+        "Item(PartB)",
+        "Item(PartC)",
+        "ItemAt(PartC,Dock)",
+        "Loc(Aisle1)",
+        "Loc(Aisle2)",
+        "Loc(Dock)",
+        "Loc(Pack)",
+        "Loc(Quality)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 6,
+      "action": "Drive(R2,Aisle2,Quality)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R2)",
+        "Loc(Aisle2)",
+        "Loc(Quality)",
+        "At(R2,Aisle2)"
+      ],
+      "effects": [
+        "At(R2,Quality)",
+        "!At(R2,Aisle2)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R2,Quality)"
+      ],
+      "deleted": [
+        "At(R2,Aisle2)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,PartA)",
+        "Assigned(R2,PartB)",
+        "Assigned(R3,PartC)",
+        "At(R1,Pack)",
+        "At(R2,Quality)",
+        "At(R3,Dock)",
+        "Carrying(R1,PartA)",
+        "Carrying(R2,PartB)",
+        "Empty(R3)",
+        "Item(PartA)",
+        "Item(PartB)",
+        "Item(PartC)",
+        "ItemAt(PartC,Dock)",
+        "Loc(Aisle1)",
+        "Loc(Aisle2)",
+        "Loc(Dock)",
+        "Loc(Pack)",
+        "Loc(Quality)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 7,
+      "action": "Pickup(R3,PartC,Dock)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R3)",
+        "Item(PartC)",
+        "Loc(Dock)",
+        "Assigned(R3,PartC)",
+        "At(R3,Dock)",
+        "ItemAt(PartC,Dock)",
+        "Empty(R3)"
+      ],
+      "effects": [
+        "Carrying(R3,PartC)",
+        "!ItemAt(PartC,Dock)",
+        "!Empty(R3)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Carrying(R3,PartC)"
+      ],
+      "deleted": [
+        "Empty(R3)",
+        "ItemAt(PartC,Dock)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,PartA)",
+        "Assigned(R2,PartB)",
+        "Assigned(R3,PartC)",
+        "At(R1,Pack)",
+        "At(R2,Quality)",
+        "At(R3,Dock)",
+        "Carrying(R1,PartA)",
+        "Carrying(R2,PartB)",
+        "Carrying(R3,PartC)",
+        "Item(PartA)",
+        "Item(PartB)",
+        "Item(PartC)",
+        "Loc(Aisle1)",
+        "Loc(Aisle2)",
+        "Loc(Dock)",
+        "Loc(Pack)",
+        "Loc(Quality)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 8,
+      "action": "Drive(R3,Dock,Pack)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R3)",
+        "Loc(Dock)",
+        "Loc(Pack)",
+        "At(R3,Dock)"
+      ],
+      "effects": [
+        "At(R3,Pack)",
+        "!At(R3,Dock)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R3,Pack)"
+      ],
+      "deleted": [
+        "At(R3,Dock)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,PartA)",
+        "Assigned(R2,PartB)",
+        "Assigned(R3,PartC)",
+        "At(R1,Pack)",
+        "At(R2,Quality)",
+        "At(R3,Pack)",
+        "Carrying(R1,PartA)",
+        "Carrying(R2,PartB)",
+        "Carrying(R3,PartC)",
+        "Item(PartA)",
+        "Item(PartB)",
+        "Item(PartC)",
+        "Loc(Aisle1)",
+        "Loc(Aisle2)",
+        "Loc(Dock)",
+        "Loc(Pack)",
+        "Loc(Quality)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 9,
+      "action": "Drop(R1,PartA,Pack)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R1)",
+        "Item(PartA)",
+        "Loc(Pack)",
+        "Assigned(R1,PartA)",
+        "At(R1,Pack)",
+        "Carrying(R1,PartA)"
+      ],
+      "effects": [
+        "ItemAt(PartA,Pack)",
+        "Empty(R1)",
+        "!Carrying(R1,PartA)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Empty(R1)",
+        "ItemAt(PartA,Pack)"
+      ],
+      "deleted": [
+        "Carrying(R1,PartA)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(PartA,Pack)"
+      ],
+      "goal_count": 1,
+      "state": [
+        "Assigned(R1,PartA)",
+        "Assigned(R2,PartB)",
+        "Assigned(R3,PartC)",
+        "At(R1,Pack)",
+        "At(R2,Quality)",
+        "At(R3,Pack)",
+        "Carrying(R2,PartB)",
+        "Carrying(R3,PartC)",
+        "Empty(R1)",
+        "Item(PartA)",
+        "Item(PartB)",
+        "Item(PartC)",
+        "ItemAt(PartA,Pack)",
+        "Loc(Aisle1)",
+        "Loc(Aisle2)",
+        "Loc(Dock)",
+        "Loc(Pack)",
+        "Loc(Quality)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 10,
+      "action": "Drop(R2,PartB,Quality)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R2)",
+        "Item(PartB)",
+        "Loc(Quality)",
+        "Assigned(R2,PartB)",
+        "At(R2,Quality)",
+        "Carrying(R2,PartB)"
+      ],
+      "effects": [
+        "ItemAt(PartB,Quality)",
+        "Empty(R2)",
+        "!Carrying(R2,PartB)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Empty(R2)",
+        "ItemAt(PartB,Quality)"
+      ],
+      "deleted": [
+        "Carrying(R2,PartB)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(PartA,Pack)",
+        "ItemAt(PartB,Quality)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "Assigned(R1,PartA)",
+        "Assigned(R2,PartB)",
+        "Assigned(R3,PartC)",
+        "At(R1,Pack)",
+        "At(R2,Quality)",
+        "At(R3,Pack)",
+        "Carrying(R3,PartC)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Item(PartA)",
+        "Item(PartB)",
+        "Item(PartC)",
+        "ItemAt(PartA,Pack)",
+        "ItemAt(PartB,Quality)",
+        "Loc(Aisle1)",
+        "Loc(Aisle2)",
+        "Loc(Dock)",
+        "Loc(Pack)",
+        "Loc(Quality)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 11,
+      "action": "Drop(R3,PartC,Pack)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R3)",
+        "Item(PartC)",
+        "Loc(Pack)",
+        "Assigned(R3,PartC)",
+        "At(R3,Pack)",
+        "Carrying(R3,PartC)"
+      ],
+      "effects": [
+        "ItemAt(PartC,Pack)",
+        "Empty(R3)",
+        "!Carrying(R3,PartC)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Empty(R3)",
+        "ItemAt(PartC,Pack)"
+      ],
+      "deleted": [
+        "Carrying(R3,PartC)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(PartA,Pack)",
+        "ItemAt(PartB,Quality)",
+        "ItemAt(PartC,Pack)"
+      ],
+      "goal_count": 3,
+      "state": [
+        "Assigned(R1,PartA)",
+        "Assigned(R2,PartB)",
+        "Assigned(R3,PartC)",
+        "At(R1,Pack)",
+        "At(R2,Quality)",
+        "At(R3,Pack)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(PartA)",
+        "Item(PartB)",
+        "Item(PartC)",
+        "ItemAt(PartA,Pack)",
+        "ItemAt(PartB,Quality)",
+        "ItemAt(PartC,Pack)",
+        "Loc(Aisle1)",
+        "Loc(Aisle2)",
+        "Loc(Dock)",
+        "Loc(Pack)",
+        "Loc(Quality)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    }
+  ]
+}

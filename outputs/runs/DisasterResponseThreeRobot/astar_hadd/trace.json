@@ -1,0 +1,697 @@
+{
+  "valid": true,
+  "errors": [],
+  "missing_goals": [],
+  "final_state": [
+    "Assigned(R1,MedKit)",
+    "Assigned(R2,Radio)",
+    "Assigned(R3,Water)",
+    "At(R1,Clinic)",
+    "At(R2,Command)",
+    "At(R3,Shelter)",
+    "Empty(R1)",
+    "Empty(R2)",
+    "Empty(R3)",
+    "Item(MedKit)",
+    "Item(Radio)",
+    "Item(Water)",
+    "ItemAt(MedKit,Clinic)",
+    "ItemAt(Radio,Command)",
+    "ItemAt(Water,Shelter)",
+    "Loc(Clinic)",
+    "Loc(Command)",
+    "Loc(Depot)",
+    "Loc(Shelter)",
+    "Loc(Staging)",
+    "Robot(R1)",
+    "Robot(R2)",
+    "Robot(R3)"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "action": "START",
+      "valid": true,
+      "preconditions": [],
+      "effects": [],
+      "missing_preconditions": [],
+      "added": [],
+      "deleted": [],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,Radio)",
+        "Assigned(R3,Water)",
+        "At(R1,Staging)",
+        "At(R2,Staging)",
+        "At(R3,Staging)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(MedKit)",
+        "Item(Radio)",
+        "Item(Water)",
+        "ItemAt(MedKit,Depot)",
+        "ItemAt(Radio,Depot)",
+        "ItemAt(Water,Depot)",
+        "Loc(Clinic)",
+        "Loc(Command)",
+        "Loc(Depot)",
+        "Loc(Shelter)",
+        "Loc(Staging)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 1,
+      "action": "Drive(R1,Staging,Depot)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R1)",
+        "Loc(Staging)",
+        "Loc(Depot)",
+        "At(R1,Staging)"
+      ],
+      "effects": [
+        "At(R1,Depot)",
+        "!At(R1,Staging)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R1,Depot)"
+      ],
+      "deleted": [
+        "At(R1,Staging)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,Radio)",
+        "Assigned(R3,Water)",
+        "At(R1,Depot)",
+        "At(R2,Staging)",
+        "At(R3,Staging)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(MedKit)",
+        "Item(Radio)",
+        "Item(Water)",
+        "ItemAt(MedKit,Depot)",
+        "ItemAt(Radio,Depot)",
+        "ItemAt(Water,Depot)",
+        "Loc(Clinic)",
+        "Loc(Command)",
+        "Loc(Depot)",
+        "Loc(Shelter)",
+        "Loc(Staging)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 2,
+      "action": "Drive(R2,Staging,Depot)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R2)",
+        "Loc(Staging)",
+        "Loc(Depot)",
+        "At(R2,Staging)"
+      ],
+      "effects": [
+        "At(R2,Depot)",
+        "!At(R2,Staging)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R2,Depot)"
+      ],
+      "deleted": [
+        "At(R2,Staging)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,Radio)",
+        "Assigned(R3,Water)",
+        "At(R1,Depot)",
+        "At(R2,Depot)",
+        "At(R3,Staging)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(MedKit)",
+        "Item(Radio)",
+        "Item(Water)",
+        "ItemAt(MedKit,Depot)",
+        "ItemAt(Radio,Depot)",
+        "ItemAt(Water,Depot)",
+        "Loc(Clinic)",
+        "Loc(Command)",
+        "Loc(Depot)",
+        "Loc(Shelter)",
+        "Loc(Staging)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 3,
+      "action": "Drive(R3,Staging,Depot)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R3)",
+        "Loc(Staging)",
+        "Loc(Depot)",
+        "At(R3,Staging)"
+      ],
+      "effects": [
+        "At(R3,Depot)",
+        "!At(R3,Staging)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R3,Depot)"
+      ],
+      "deleted": [
+        "At(R3,Staging)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,Radio)",
+        "Assigned(R3,Water)",
+        "At(R1,Depot)",
+        "At(R2,Depot)",
+        "At(R3,Depot)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(MedKit)",
+        "Item(Radio)",
+        "Item(Water)",
+        "ItemAt(MedKit,Depot)",
+        "ItemAt(Radio,Depot)",
+        "ItemAt(Water,Depot)",
+        "Loc(Clinic)",
+        "Loc(Command)",
+        "Loc(Depot)",
+        "Loc(Shelter)",
+        "Loc(Staging)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 4,
+      "action": "Pickup(R1,MedKit,Depot)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R1)",
+        "Item(MedKit)",
+        "Loc(Depot)",
+        "Assigned(R1,MedKit)",
+        "At(R1,Depot)",
+        "ItemAt(MedKit,Depot)",
+        "Empty(R1)"
+      ],
+      "effects": [
+        "Carrying(R1,MedKit)",
+        "!ItemAt(MedKit,Depot)",
+        "!Empty(R1)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Carrying(R1,MedKit)"
+      ],
+      "deleted": [
+        "Empty(R1)",
+        "ItemAt(MedKit,Depot)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,Radio)",
+        "Assigned(R3,Water)",
+        "At(R1,Depot)",
+        "At(R2,Depot)",
+        "At(R3,Depot)",
+        "Carrying(R1,MedKit)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(MedKit)",
+        "Item(Radio)",
+        "Item(Water)",
+        "ItemAt(Radio,Depot)",
+        "ItemAt(Water,Depot)",
+        "Loc(Clinic)",
+        "Loc(Command)",
+        "Loc(Depot)",
+        "Loc(Shelter)",
+        "Loc(Staging)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 5,
+      "action": "Drive(R1,Depot,Clinic)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R1)",
+        "Loc(Depot)",
+        "Loc(Clinic)",
+        "At(R1,Depot)"
+      ],
+      "effects": [
+        "At(R1,Clinic)",
+        "!At(R1,Depot)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R1,Clinic)"
+      ],
+      "deleted": [
+        "At(R1,Depot)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,Radio)",
+        "Assigned(R3,Water)",
+        "At(R1,Clinic)",
+        "At(R2,Depot)",
+        "At(R3,Depot)",
+        "Carrying(R1,MedKit)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(MedKit)",
+        "Item(Radio)",
+        "Item(Water)",
+        "ItemAt(Radio,Depot)",
+        "ItemAt(Water,Depot)",
+        "Loc(Clinic)",
+        "Loc(Command)",
+        "Loc(Depot)",
+        "Loc(Shelter)",
+        "Loc(Staging)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 6,
+      "action": "Drop(R1,MedKit,Clinic)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R1)",
+        "Item(MedKit)",
+        "Loc(Clinic)",
+        "Assigned(R1,MedKit)",
+        "At(R1,Clinic)",
+        "Carrying(R1,MedKit)"
+      ],
+      "effects": [
+        "ItemAt(MedKit,Clinic)",
+        "Empty(R1)",
+        "!Carrying(R1,MedKit)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Empty(R1)",
+        "ItemAt(MedKit,Clinic)"
+      ],
+      "deleted": [
+        "Carrying(R1,MedKit)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(MedKit,Clinic)"
+      ],
+      "goal_count": 1,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,Radio)",
+        "Assigned(R3,Water)",
+        "At(R1,Clinic)",
+        "At(R2,Depot)",
+        "At(R3,Depot)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(MedKit)",
+        "Item(Radio)",
+        "Item(Water)",
+        "ItemAt(MedKit,Clinic)",
+        "ItemAt(Radio,Depot)",
+        "ItemAt(Water,Depot)",
+        "Loc(Clinic)",
+        "Loc(Command)",
+        "Loc(Depot)",
+        "Loc(Shelter)",
+        "Loc(Staging)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 7,
+      "action": "Pickup(R2,Radio,Depot)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R2)",
+        "Item(Radio)",
+        "Loc(Depot)",
+        "Assigned(R2,Radio)",
+        "At(R2,Depot)",
+        "ItemAt(Radio,Depot)",
+        "Empty(R2)"
+      ],
+      "effects": [
+        "Carrying(R2,Radio)",
+        "!ItemAt(Radio,Depot)",
+        "!Empty(R2)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Carrying(R2,Radio)"
+      ],
+      "deleted": [
+        "Empty(R2)",
+        "ItemAt(Radio,Depot)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(MedKit,Clinic)"
+      ],
+      "goal_count": 1,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,Radio)",
+        "Assigned(R3,Water)",
+        "At(R1,Clinic)",
+        "At(R2,Depot)",
+        "At(R3,Depot)",
+        "Carrying(R2,Radio)",
+        "Empty(R1)",
+        "Empty(R3)",
+        "Item(MedKit)",
+        "Item(Radio)",
+        "Item(Water)",
+        "ItemAt(MedKit,Clinic)",
+        "ItemAt(Water,Depot)",
+        "Loc(Clinic)",
+        "Loc(Command)",
+        "Loc(Depot)",
+        "Loc(Shelter)",
+        "Loc(Staging)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 8,
+      "action": "Drive(R2,Depot,Command)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R2)",
+        "Loc(Depot)",
+        "Loc(Command)",
+        "At(R2,Depot)"
+      ],
+      "effects": [
+        "At(R2,Command)",
+        "!At(R2,Depot)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R2,Command)"
+      ],
+      "deleted": [
+        "At(R2,Depot)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(MedKit,Clinic)"
+      ],
+      "goal_count": 1,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,Radio)",
+        "Assigned(R3,Water)",
+        "At(R1,Clinic)",
+        "At(R2,Command)",
+        "At(R3,Depot)",
+        "Carrying(R2,Radio)",
+        "Empty(R1)",
+        "Empty(R3)",
+        "Item(MedKit)",
+        "Item(Radio)",
+        "Item(Water)",
+        "ItemAt(MedKit,Clinic)",
+        "ItemAt(Water,Depot)",
+        "Loc(Clinic)",
+        "Loc(Command)",
+        "Loc(Depot)",
+        "Loc(Shelter)",
+        "Loc(Staging)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 9,
+      "action": "Drop(R2,Radio,Command)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R2)",
+        "Item(Radio)",
+        "Loc(Command)",
+        "Assigned(R2,Radio)",
+        "At(R2,Command)",
+        "Carrying(R2,Radio)"
+      ],
+      "effects": [
+        "ItemAt(Radio,Command)",
+        "Empty(R2)",
+        "!Carrying(R2,Radio)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Empty(R2)",
+        "ItemAt(Radio,Command)"
+      ],
+      "deleted": [
+        "Carrying(R2,Radio)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(MedKit,Clinic)",
+        "ItemAt(Radio,Command)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,Radio)",
+        "Assigned(R3,Water)",
+        "At(R1,Clinic)",
+        "At(R2,Command)",
+        "At(R3,Depot)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(MedKit)",
+        "Item(Radio)",
+        "Item(Water)",
+        "ItemAt(MedKit,Clinic)",
+        "ItemAt(Radio,Command)",
+        "ItemAt(Water,Depot)",
+        "Loc(Clinic)",
+        "Loc(Command)",
+        "Loc(Depot)",
+        "Loc(Shelter)",
+        "Loc(Staging)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 10,
+      "action": "Pickup(R3,Water,Depot)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R3)",
+        "Item(Water)",
+        "Loc(Depot)",
+        "Assigned(R3,Water)",
+        "At(R3,Depot)",
+        "ItemAt(Water,Depot)",
+        "Empty(R3)"
+      ],
+      "effects": [
+        "Carrying(R3,Water)",
+        "!ItemAt(Water,Depot)",
+        "!Empty(R3)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Carrying(R3,Water)"
+      ],
+      "deleted": [
+        "Empty(R3)",
+        "ItemAt(Water,Depot)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(MedKit,Clinic)",
+        "ItemAt(Radio,Command)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,Radio)",
+        "Assigned(R3,Water)",
+        "At(R1,Clinic)",
+        "At(R2,Command)",
+        "At(R3,Depot)",
+        "Carrying(R3,Water)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Item(MedKit)",
+        "Item(Radio)",
+        "Item(Water)",
+        "ItemAt(MedKit,Clinic)",
+        "ItemAt(Radio,Command)",
+        "Loc(Clinic)",
+        "Loc(Command)",
+        "Loc(Depot)",
+        "Loc(Shelter)",
+        "Loc(Staging)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 11,
+      "action": "Drive(R3,Depot,Shelter)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R3)",
+        "Loc(Depot)",
+        "Loc(Shelter)",
+        "At(R3,Depot)"
+      ],
+      "effects": [
+        "At(R3,Shelter)",
+        "!At(R3,Depot)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R3,Shelter)"
+      ],
+      "deleted": [
+        "At(R3,Depot)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(MedKit,Clinic)",
+        "ItemAt(Radio,Command)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,Radio)",
+        "Assigned(R3,Water)",
+        "At(R1,Clinic)",
+        "At(R2,Command)",
+        "At(R3,Shelter)",
+        "Carrying(R3,Water)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Item(MedKit)",
+        "Item(Radio)",
+        "Item(Water)",
+        "ItemAt(MedKit,Clinic)",
+        "ItemAt(Radio,Command)",
+        "Loc(Clinic)",
+        "Loc(Command)",
+        "Loc(Depot)",
+        "Loc(Shelter)",
+        "Loc(Staging)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 12,
+      "action": "Drop(R3,Water,Shelter)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R3)",
+        "Item(Water)",
+        "Loc(Shelter)",
+        "Assigned(R3,Water)",
+        "At(R3,Shelter)",
+        "Carrying(R3,Water)"
+      ],
+      "effects": [
+        "ItemAt(Water,Shelter)",
+        "Empty(R3)",
+        "!Carrying(R3,Water)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Empty(R3)",
+        "ItemAt(Water,Shelter)"
+      ],
+      "deleted": [
+        "Carrying(R3,Water)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(MedKit,Clinic)",
+        "ItemAt(Radio,Command)",
+        "ItemAt(Water,Shelter)"
+      ],
+      "goal_count": 3,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,Radio)",
+        "Assigned(R3,Water)",
+        "At(R1,Clinic)",
+        "At(R2,Command)",
+        "At(R3,Shelter)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(MedKit)",
+        "Item(Radio)",
+        "Item(Water)",
+        "ItemAt(MedKit,Clinic)",
+        "ItemAt(Radio,Command)",
+        "ItemAt(Water,Shelter)",
+        "Loc(Clinic)",
+        "Loc(Command)",
+        "Loc(Depot)",
+        "Loc(Shelter)",
+        "Loc(Staging)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    }
+  ]
+}

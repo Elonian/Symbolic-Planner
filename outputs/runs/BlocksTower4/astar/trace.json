@@ -1,0 +1,217 @@
+{
+  "valid": true,
+  "errors": [],
+  "missing_goals": [],
+  "final_state": [
+    "Block(A)",
+    "Block(B)",
+    "Block(C)",
+    "Block(D)",
+    "Clear(D)",
+    "Clear(Table)",
+    "On(A,Table)",
+    "On(B,A)",
+    "On(C,B)",
+    "On(D,C)"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "action": "START",
+      "valid": true,
+      "preconditions": [],
+      "effects": [],
+      "missing_preconditions": [],
+      "added": [],
+      "deleted": [],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Block(A)",
+        "Block(B)",
+        "Block(C)",
+        "Block(D)",
+        "Clear(A)",
+        "On(A,B)",
+        "On(B,C)",
+        "On(C,D)",
+        "On(D,Table)"
+      ]
+    },
+    {
+      "step": 1,
+      "action": "MoveToTable(A,B)",
+      "valid": true,
+      "preconditions": [
+        "On(A,B)",
+        "Clear(A)",
+        "Block(A)",
+        "Block(B)"
+      ],
+      "effects": [
+        "On(A,Table)",
+        "Clear(B)",
+        "!On(A,B)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Clear(B)",
+        "On(A,Table)"
+      ],
+      "deleted": [
+        "On(A,B)"
+      ],
+      "goals_satisfied": [
+        "On(A,Table)"
+      ],
+      "goal_count": 1,
+      "state": [
+        "Block(A)",
+        "Block(B)",
+        "Block(C)",
+        "Block(D)",
+        "Clear(A)",
+        "Clear(B)",
+        "On(A,Table)",
+        "On(B,C)",
+        "On(C,D)",
+        "On(D,Table)"
+      ]
+    },
+    {
+      "step": 2,
+      "action": "Move(B,C,A)",
+      "valid": true,
+      "preconditions": [
+        "On(B,C)",
+        "Clear(B)",
+        "Clear(A)",
+        "Block(B)",
+        "Block(A)"
+      ],
+      "effects": [
+        "On(B,A)",
+        "Clear(C)",
+        "!On(B,C)",
+        "!Clear(A)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Clear(C)",
+        "On(B,A)"
+      ],
+      "deleted": [
+        "Clear(A)",
+        "On(B,C)"
+      ],
+      "goals_satisfied": [
+        "On(A,Table)",
+        "On(B,A)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "Block(A)",
+        "Block(B)",
+        "Block(C)",
+        "Block(D)",
+        "Clear(B)",
+        "Clear(C)",
+        "On(A,Table)",
+        "On(B,A)",
+        "On(C,D)",
+        "On(D,Table)"
+      ]
+    },
+    {
+      "step": 3,
+      "action": "Move(C,D,B)",
+      "valid": true,
+      "preconditions": [
+        "On(C,D)",
+        "Clear(C)",
+        "Clear(B)",
+        "Block(C)",
+        "Block(B)"
+      ],
+      "effects": [
+        "On(C,B)",
+        "Clear(D)",
+        "!On(C,D)",
+        "!Clear(B)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Clear(D)",
+        "On(C,B)"
+      ],
+      "deleted": [
+        "Clear(B)",
+        "On(C,D)"
+      ],
+      "goals_satisfied": [
+        "On(A,Table)",
+        "On(B,A)",
+        "On(C,B)"
+      ],
+      "goal_count": 3,
+      "state": [
+        "Block(A)",
+        "Block(B)",
+        "Block(C)",
+        "Block(D)",
+        "Clear(C)",
+        "Clear(D)",
+        "On(A,Table)",
+        "On(B,A)",
+        "On(C,B)",
+        "On(D,Table)"
+      ]
+    },
+    {
+      "step": 4,
+      "action": "Move(D,Table,C)",
+      "valid": true,
+      "preconditions": [
+        "On(D,Table)",
+        "Clear(D)",
+        "Clear(C)",
+        "Block(D)",
+        "Block(C)"
+      ],
+      "effects": [
+        "On(D,C)",
+        "Clear(Table)",
+        "!On(D,Table)",
+        "!Clear(C)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Clear(Table)",
+        "On(D,C)"
+      ],
+      "deleted": [
+        "Clear(C)",
+        "On(D,Table)"
+      ],
+      "goals_satisfied": [
+        "On(A,Table)",
+        "On(B,A)",
+        "On(C,B)",
+        "On(D,C)"
+      ],
+      "goal_count": 4,
+      "state": [
+        "Block(A)",
+        "Block(B)",
+        "Block(C)",
+        "Block(D)",
+        "Clear(D)",
+        "Clear(Table)",
+        "On(A,Table)",
+        "On(B,A)",
+        "On(C,B)",
+        "On(D,C)"
+      ]
+    }
+  ]
+}

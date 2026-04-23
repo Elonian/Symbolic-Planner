@@ -1,0 +1,34 @@
+Environment: /mntdatalora/src/Symbolic-Planner/envs/HospitalThreeRobotDelivery.txt
+***** Environment *****
+
+Symbols: BloodSample,Garage,Lab,MedKit,OR,Pharmacy,R1,R2,R3,SterileTray,Ward,
+Initial conditions: Assigned(R1,MedKit) Assigned(R2,BloodSample) Assigned(R3,SterileTray) At(R1,Garage) At(R2,Garage) At(R3,Garage) Empty(R1) Empty(R2) Empty(R3) Item(BloodSample) Item(MedKit) Item(SterileTray) ItemAt(BloodSample,Ward) ItemAt(MedKit,Pharmacy) ItemAt(SterileTray,OR) Loc(Garage) Loc(Lab) Loc(OR) Loc(Pharmacy) Loc(Ward) Robot(R1) Robot(R2) Robot(R3) 
+Goal conditions: ItemAt(BloodSample,Lab) ItemAt(MedKit,Ward) ItemAt(SterileTray,Pharmacy) 
+Actions:
+Drive(r,x,y)
+Precondition: Robot(r) Loc(x) Loc(y) At(r,x) 
+Effect: At(r,y) !At(r,x) 
+
+Pickup(r,i,l)
+Precondition: Robot(r) Item(i) Loc(l) Assigned(r,i) At(r,l) ItemAt(i,l) Empty(r) 
+Effect: Carrying(r,i) !ItemAt(i,l) !Empty(r) 
+
+Drop(r,i,l)
+Precondition: Robot(r) Item(i) Loc(l) Assigned(r,i) At(r,l) Carrying(r,i) 
+Effect: ItemAt(i,l) Empty(r) !Carrying(r,i) 
+
+***** Environment Created! *****
+
+Plan: 
+Drive(R1,Garage,Pharmacy) 
+Pickup(R1,MedKit,Pharmacy) 
+Drive(R1,Pharmacy,Ward) 
+Drop(R1,MedKit,Ward) 
+Drive(R2,Garage,Ward) 
+Pickup(R2,BloodSample,Ward) 
+Drive(R2,Ward,Lab) 
+Drop(R2,BloodSample,Lab) 
+Drive(R3,Garage,OR) 
+Pickup(R3,SterileTray,OR) 
+Drive(R3,OR,Pharmacy) 
+Drop(R3,SterileTray,Pharmacy) 

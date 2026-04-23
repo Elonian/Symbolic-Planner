@@ -1,0 +1,1 @@
+MoveToTable(A,B)

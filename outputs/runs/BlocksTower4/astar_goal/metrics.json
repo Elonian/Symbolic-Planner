@@ -1,0 +1,13 @@
+{
+  "planner_name": "A Star Search [unsatisfied-goals]",
+  "solved": true,
+  "plan_length": 4,
+  "expanded": 4,
+  "generated": 12,
+  "grounded_actions": 150,
+  "time_ms": 0.655936,
+  "returncode": 0,
+  "plan_length_from_output": 4,
+  "valid_replay": true,
+  "missing_goals": []
+}

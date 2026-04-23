@@ -1,0 +1,33 @@
+Environment: /mntdatalora/src/Symbolic-Planner/envs/WarehouseThreeRobotFulfillment.txt
+***** Environment *****
+
+Symbols: Aisle1,Aisle2,Dock,Pack,PartA,PartB,PartC,Quality,R1,R2,R3,
+Initial conditions: Assigned(R1,PartA) Assigned(R2,PartB) Assigned(R3,PartC) At(R1,Dock) At(R2,Dock) At(R3,Dock) Empty(R1) Empty(R2) Empty(R3) Item(PartA) Item(PartB) Item(PartC) ItemAt(PartA,Aisle1) ItemAt(PartB,Aisle2) ItemAt(PartC,Dock) Loc(Aisle1) Loc(Aisle2) Loc(Dock) Loc(Pack) Loc(Quality) Robot(R1) Robot(R2) Robot(R3) 
+Goal conditions: ItemAt(PartA,Pack) ItemAt(PartB,Quality) ItemAt(PartC,Pack) 
+Actions:
+Drive(r,x,y)
+Precondition: Robot(r) Loc(x) Loc(y) At(r,x) 
+Effect: At(r,y) !At(r,x) 
+
+Pickup(r,i,l)
+Precondition: Robot(r) Item(i) Loc(l) Assigned(r,i) At(r,l) ItemAt(i,l) Empty(r) 
+Effect: Carrying(r,i) !ItemAt(i,l) !Empty(r) 
+
+Drop(r,i,l)
+Precondition: Robot(r) Item(i) Loc(l) Assigned(r,i) At(r,l) Carrying(r,i) 
+Effect: ItemAt(i,l) Empty(r) !Carrying(r,i) 
+
+***** Environment Created! *****
+
+Plan: 
+Drive(R1,Dock,Aisle1) 
+Drive(R2,Dock,Aisle2) 
+Pickup(R1,PartA,Aisle1) 
+Drive(R1,Aisle1,Pack) 
+Drop(R1,PartA,Pack) 
+Pickup(R2,PartB,Aisle2) 
+Drive(R2,Aisle2,Quality) 
+Drop(R2,PartB,Quality) 
+Pickup(R3,PartC,Dock) 
+Drive(R3,Dock,Pack) 
+Drop(R3,PartC,Pack) 

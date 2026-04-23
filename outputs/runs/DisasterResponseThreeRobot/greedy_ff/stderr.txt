@@ -1,0 +1,1 @@
+Planner: Greedy Best First Search [delete-relaxation-relaxed-plan] | solved=yes | plan_length=12 | expanded=414 | generated=1932 | grounded_actions=3993 | time_ms=6308.16

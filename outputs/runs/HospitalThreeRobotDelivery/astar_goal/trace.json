@@ -1,0 +1,702 @@
+{
+  "valid": true,
+  "errors": [],
+  "missing_goals": [],
+  "final_state": [
+    "Assigned(R1,MedKit)",
+    "Assigned(R2,BloodSample)",
+    "Assigned(R3,SterileTray)",
+    "At(R1,Ward)",
+    "At(R2,Lab)",
+    "At(R3,Pharmacy)",
+    "Empty(R1)",
+    "Empty(R2)",
+    "Empty(R3)",
+    "Item(BloodSample)",
+    "Item(MedKit)",
+    "Item(SterileTray)",
+    "ItemAt(BloodSample,Lab)",
+    "ItemAt(MedKit,Ward)",
+    "ItemAt(SterileTray,Pharmacy)",
+    "Loc(Garage)",
+    "Loc(Lab)",
+    "Loc(OR)",
+    "Loc(Pharmacy)",
+    "Loc(Ward)",
+    "Robot(R1)",
+    "Robot(R2)",
+    "Robot(R3)"
+  ],
+  "trace": [
+    {
+      "step": 0,
+      "action": "START",
+      "valid": true,
+      "preconditions": [],
+      "effects": [],
+      "missing_preconditions": [],
+      "added": [],
+      "deleted": [],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,BloodSample)",
+        "Assigned(R3,SterileTray)",
+        "At(R1,Garage)",
+        "At(R2,Garage)",
+        "At(R3,Garage)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(BloodSample)",
+        "Item(MedKit)",
+        "Item(SterileTray)",
+        "ItemAt(BloodSample,Ward)",
+        "ItemAt(MedKit,Pharmacy)",
+        "ItemAt(SterileTray,OR)",
+        "Loc(Garage)",
+        "Loc(Lab)",
+        "Loc(OR)",
+        "Loc(Pharmacy)",
+        "Loc(Ward)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 1,
+      "action": "Drive(R1,Garage,Pharmacy)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R1)",
+        "Loc(Garage)",
+        "Loc(Pharmacy)",
+        "At(R1,Garage)"
+      ],
+      "effects": [
+        "At(R1,Pharmacy)",
+        "!At(R1,Garage)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R1,Pharmacy)"
+      ],
+      "deleted": [
+        "At(R1,Garage)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,BloodSample)",
+        "Assigned(R3,SterileTray)",
+        "At(R1,Pharmacy)",
+        "At(R2,Garage)",
+        "At(R3,Garage)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(BloodSample)",
+        "Item(MedKit)",
+        "Item(SterileTray)",
+        "ItemAt(BloodSample,Ward)",
+        "ItemAt(MedKit,Pharmacy)",
+        "ItemAt(SterileTray,OR)",
+        "Loc(Garage)",
+        "Loc(Lab)",
+        "Loc(OR)",
+        "Loc(Pharmacy)",
+        "Loc(Ward)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 2,
+      "action": "Pickup(R1,MedKit,Pharmacy)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R1)",
+        "Item(MedKit)",
+        "Loc(Pharmacy)",
+        "Assigned(R1,MedKit)",
+        "At(R1,Pharmacy)",
+        "ItemAt(MedKit,Pharmacy)",
+        "Empty(R1)"
+      ],
+      "effects": [
+        "Carrying(R1,MedKit)",
+        "!ItemAt(MedKit,Pharmacy)",
+        "!Empty(R1)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Carrying(R1,MedKit)"
+      ],
+      "deleted": [
+        "Empty(R1)",
+        "ItemAt(MedKit,Pharmacy)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,BloodSample)",
+        "Assigned(R3,SterileTray)",
+        "At(R1,Pharmacy)",
+        "At(R2,Garage)",
+        "At(R3,Garage)",
+        "Carrying(R1,MedKit)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(BloodSample)",
+        "Item(MedKit)",
+        "Item(SterileTray)",
+        "ItemAt(BloodSample,Ward)",
+        "ItemAt(SterileTray,OR)",
+        "Loc(Garage)",
+        "Loc(Lab)",
+        "Loc(OR)",
+        "Loc(Pharmacy)",
+        "Loc(Ward)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 3,
+      "action": "Drive(R1,Pharmacy,Ward)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R1)",
+        "Loc(Pharmacy)",
+        "Loc(Ward)",
+        "At(R1,Pharmacy)"
+      ],
+      "effects": [
+        "At(R1,Ward)",
+        "!At(R1,Pharmacy)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R1,Ward)"
+      ],
+      "deleted": [
+        "At(R1,Pharmacy)"
+      ],
+      "goals_satisfied": [],
+      "goal_count": 0,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,BloodSample)",
+        "Assigned(R3,SterileTray)",
+        "At(R1,Ward)",
+        "At(R2,Garage)",
+        "At(R3,Garage)",
+        "Carrying(R1,MedKit)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(BloodSample)",
+        "Item(MedKit)",
+        "Item(SterileTray)",
+        "ItemAt(BloodSample,Ward)",
+        "ItemAt(SterileTray,OR)",
+        "Loc(Garage)",
+        "Loc(Lab)",
+        "Loc(OR)",
+        "Loc(Pharmacy)",
+        "Loc(Ward)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 4,
+      "action": "Drop(R1,MedKit,Ward)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R1)",
+        "Item(MedKit)",
+        "Loc(Ward)",
+        "Assigned(R1,MedKit)",
+        "At(R1,Ward)",
+        "Carrying(R1,MedKit)"
+      ],
+      "effects": [
+        "ItemAt(MedKit,Ward)",
+        "Empty(R1)",
+        "!Carrying(R1,MedKit)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Empty(R1)",
+        "ItemAt(MedKit,Ward)"
+      ],
+      "deleted": [
+        "Carrying(R1,MedKit)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(MedKit,Ward)"
+      ],
+      "goal_count": 1,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,BloodSample)",
+        "Assigned(R3,SterileTray)",
+        "At(R1,Ward)",
+        "At(R2,Garage)",
+        "At(R3,Garage)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(BloodSample)",
+        "Item(MedKit)",
+        "Item(SterileTray)",
+        "ItemAt(BloodSample,Ward)",
+        "ItemAt(MedKit,Ward)",
+        "ItemAt(SterileTray,OR)",
+        "Loc(Garage)",
+        "Loc(Lab)",
+        "Loc(OR)",
+        "Loc(Pharmacy)",
+        "Loc(Ward)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 5,
+      "action": "Drive(R2,Garage,Ward)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R2)",
+        "Loc(Garage)",
+        "Loc(Ward)",
+        "At(R2,Garage)"
+      ],
+      "effects": [
+        "At(R2,Ward)",
+        "!At(R2,Garage)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R2,Ward)"
+      ],
+      "deleted": [
+        "At(R2,Garage)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(MedKit,Ward)"
+      ],
+      "goal_count": 1,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,BloodSample)",
+        "Assigned(R3,SterileTray)",
+        "At(R1,Ward)",
+        "At(R2,Ward)",
+        "At(R3,Garage)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(BloodSample)",
+        "Item(MedKit)",
+        "Item(SterileTray)",
+        "ItemAt(BloodSample,Ward)",
+        "ItemAt(MedKit,Ward)",
+        "ItemAt(SterileTray,OR)",
+        "Loc(Garage)",
+        "Loc(Lab)",
+        "Loc(OR)",
+        "Loc(Pharmacy)",
+        "Loc(Ward)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 6,
+      "action": "Pickup(R2,BloodSample,Ward)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R2)",
+        "Item(BloodSample)",
+        "Loc(Ward)",
+        "Assigned(R2,BloodSample)",
+        "At(R2,Ward)",
+        "ItemAt(BloodSample,Ward)",
+        "Empty(R2)"
+      ],
+      "effects": [
+        "Carrying(R2,BloodSample)",
+        "!ItemAt(BloodSample,Ward)",
+        "!Empty(R2)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Carrying(R2,BloodSample)"
+      ],
+      "deleted": [
+        "Empty(R2)",
+        "ItemAt(BloodSample,Ward)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(MedKit,Ward)"
+      ],
+      "goal_count": 1,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,BloodSample)",
+        "Assigned(R3,SterileTray)",
+        "At(R1,Ward)",
+        "At(R2,Ward)",
+        "At(R3,Garage)",
+        "Carrying(R2,BloodSample)",
+        "Empty(R1)",
+        "Empty(R3)",
+        "Item(BloodSample)",
+        "Item(MedKit)",
+        "Item(SterileTray)",
+        "ItemAt(MedKit,Ward)",
+        "ItemAt(SterileTray,OR)",
+        "Loc(Garage)",
+        "Loc(Lab)",
+        "Loc(OR)",
+        "Loc(Pharmacy)",
+        "Loc(Ward)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 7,
+      "action": "Drive(R2,Ward,Lab)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R2)",
+        "Loc(Ward)",
+        "Loc(Lab)",
+        "At(R2,Ward)"
+      ],
+      "effects": [
+        "At(R2,Lab)",
+        "!At(R2,Ward)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R2,Lab)"
+      ],
+      "deleted": [
+        "At(R2,Ward)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(MedKit,Ward)"
+      ],
+      "goal_count": 1,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,BloodSample)",
+        "Assigned(R3,SterileTray)",
+        "At(R1,Ward)",
+        "At(R2,Lab)",
+        "At(R3,Garage)",
+        "Carrying(R2,BloodSample)",
+        "Empty(R1)",
+        "Empty(R3)",
+        "Item(BloodSample)",
+        "Item(MedKit)",
+        "Item(SterileTray)",
+        "ItemAt(MedKit,Ward)",
+        "ItemAt(SterileTray,OR)",
+        "Loc(Garage)",
+        "Loc(Lab)",
+        "Loc(OR)",
+        "Loc(Pharmacy)",
+        "Loc(Ward)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 8,
+      "action": "Drop(R2,BloodSample,Lab)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R2)",
+        "Item(BloodSample)",
+        "Loc(Lab)",
+        "Assigned(R2,BloodSample)",
+        "At(R2,Lab)",
+        "Carrying(R2,BloodSample)"
+      ],
+      "effects": [
+        "ItemAt(BloodSample,Lab)",
+        "Empty(R2)",
+        "!Carrying(R2,BloodSample)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Empty(R2)",
+        "ItemAt(BloodSample,Lab)"
+      ],
+      "deleted": [
+        "Carrying(R2,BloodSample)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(BloodSample,Lab)",
+        "ItemAt(MedKit,Ward)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,BloodSample)",
+        "Assigned(R3,SterileTray)",
+        "At(R1,Ward)",
+        "At(R2,Lab)",
+        "At(R3,Garage)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(BloodSample)",
+        "Item(MedKit)",
+        "Item(SterileTray)",
+        "ItemAt(BloodSample,Lab)",
+        "ItemAt(MedKit,Ward)",
+        "ItemAt(SterileTray,OR)",
+        "Loc(Garage)",
+        "Loc(Lab)",
+        "Loc(OR)",
+        "Loc(Pharmacy)",
+        "Loc(Ward)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 9,
+      "action": "Drive(R3,Garage,OR)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R3)",
+        "Loc(Garage)",
+        "Loc(OR)",
+        "At(R3,Garage)"
+      ],
+      "effects": [
+        "At(R3,OR)",
+        "!At(R3,Garage)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R3,OR)"
+      ],
+      "deleted": [
+        "At(R3,Garage)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(BloodSample,Lab)",
+        "ItemAt(MedKit,Ward)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,BloodSample)",
+        "Assigned(R3,SterileTray)",
+        "At(R1,Ward)",
+        "At(R2,Lab)",
+        "At(R3,OR)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(BloodSample)",
+        "Item(MedKit)",
+        "Item(SterileTray)",
+        "ItemAt(BloodSample,Lab)",
+        "ItemAt(MedKit,Ward)",
+        "ItemAt(SterileTray,OR)",
+        "Loc(Garage)",
+        "Loc(Lab)",
+        "Loc(OR)",
+        "Loc(Pharmacy)",
+        "Loc(Ward)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 10,
+      "action": "Pickup(R3,SterileTray,OR)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R3)",
+        "Item(SterileTray)",
+        "Loc(OR)",
+        "Assigned(R3,SterileTray)",
+        "At(R3,OR)",
+        "ItemAt(SterileTray,OR)",
+        "Empty(R3)"
+      ],
+      "effects": [
+        "Carrying(R3,SterileTray)",
+        "!ItemAt(SterileTray,OR)",
+        "!Empty(R3)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Carrying(R3,SterileTray)"
+      ],
+      "deleted": [
+        "Empty(R3)",
+        "ItemAt(SterileTray,OR)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(BloodSample,Lab)",
+        "ItemAt(MedKit,Ward)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,BloodSample)",
+        "Assigned(R3,SterileTray)",
+        "At(R1,Ward)",
+        "At(R2,Lab)",
+        "At(R3,OR)",
+        "Carrying(R3,SterileTray)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Item(BloodSample)",
+        "Item(MedKit)",
+        "Item(SterileTray)",
+        "ItemAt(BloodSample,Lab)",
+        "ItemAt(MedKit,Ward)",
+        "Loc(Garage)",
+        "Loc(Lab)",
+        "Loc(OR)",
+        "Loc(Pharmacy)",
+        "Loc(Ward)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 11,
+      "action": "Drive(R3,OR,Pharmacy)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R3)",
+        "Loc(OR)",
+        "Loc(Pharmacy)",
+        "At(R3,OR)"
+      ],
+      "effects": [
+        "At(R3,Pharmacy)",
+        "!At(R3,OR)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "At(R3,Pharmacy)"
+      ],
+      "deleted": [
+        "At(R3,OR)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(BloodSample,Lab)",
+        "ItemAt(MedKit,Ward)"
+      ],
+      "goal_count": 2,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,BloodSample)",
+        "Assigned(R3,SterileTray)",
+        "At(R1,Ward)",
+        "At(R2,Lab)",
+        "At(R3,Pharmacy)",
+        "Carrying(R3,SterileTray)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Item(BloodSample)",
+        "Item(MedKit)",
+        "Item(SterileTray)",
+        "ItemAt(BloodSample,Lab)",
+        "ItemAt(MedKit,Ward)",
+        "Loc(Garage)",
+        "Loc(Lab)",
+        "Loc(OR)",
+        "Loc(Pharmacy)",
+        "Loc(Ward)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    },
+    {
+      "step": 12,
+      "action": "Drop(R3,SterileTray,Pharmacy)",
+      "valid": true,
+      "preconditions": [
+        "Robot(R3)",
+        "Item(SterileTray)",
+        "Loc(Pharmacy)",
+        "Assigned(R3,SterileTray)",
+        "At(R3,Pharmacy)",
+        "Carrying(R3,SterileTray)"
+      ],
+      "effects": [
+        "ItemAt(SterileTray,Pharmacy)",
+        "Empty(R3)",
+        "!Carrying(R3,SterileTray)"
+      ],
+      "missing_preconditions": [],
+      "added": [
+        "Empty(R3)",
+        "ItemAt(SterileTray,Pharmacy)"
+      ],
+      "deleted": [
+        "Carrying(R3,SterileTray)"
+      ],
+      "goals_satisfied": [
+        "ItemAt(BloodSample,Lab)",
+        "ItemAt(MedKit,Ward)",
+        "ItemAt(SterileTray,Pharmacy)"
+      ],
+      "goal_count": 3,
+      "state": [
+        "Assigned(R1,MedKit)",
+        "Assigned(R2,BloodSample)",
+        "Assigned(R3,SterileTray)",
+        "At(R1,Ward)",
+        "At(R2,Lab)",
+        "At(R3,Pharmacy)",
+        "Empty(R1)",
+        "Empty(R2)",
+        "Empty(R3)",
+        "Item(BloodSample)",
+        "Item(MedKit)",
+        "Item(SterileTray)",
+        "ItemAt(BloodSample,Lab)",
+        "ItemAt(MedKit,Ward)",
+        "ItemAt(SterileTray,Pharmacy)",
+        "Loc(Garage)",
+        "Loc(Lab)",
+        "Loc(OR)",
+        "Loc(Pharmacy)",
+        "Loc(Ward)",
+        "Robot(R1)",
+        "Robot(R2)",
+        "Robot(R3)"
+      ]
+    }
+  ]
+}

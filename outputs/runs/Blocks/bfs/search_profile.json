@@ -1,0 +1,175 @@
+{
+  "environment": "Blocks.txt",
+  "method": "bfs",
+  "source": "python search replay",
+  "solved": true,
+  "expanded_total": 20,
+  "generated_total": 28,
+  "elapsed_ms": 9.40144102787599,
+  "records": [
+    {
+      "expanded": 1,
+      "generated": 5,
+      "frontier": 5,
+      "best_goal_count": 1,
+      "min_h": 2
+    },
+    {
+      "expanded": 2,
+      "generated": 9,
+      "frontier": 8,
+      "best_goal_count": 1,
+      "min_h": 2
+    },
+    {
+      "expanded": 3,
+      "generated": 11,
+      "frontier": 9,
+      "best_goal_count": 1,
+      "min_h": 2
+    },
+    {
+      "expanded": 4,
+      "generated": 12,
+      "frontier": 9,
+      "best_goal_count": 1,
+      "min_h": 2
+    },
+    {
+      "expanded": 5,
+      "generated": 13,
+      "frontier": 9,
+      "best_goal_count": 1,
+      "min_h": 2
+    },
+    {
+      "expanded": 6,
+      "generated": 20,
+      "frontier": 15,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 7,
+      "generated": 21,
+      "frontier": 15,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 8,
+      "generated": 21,
+      "frontier": 14,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 9,
+      "generated": 21,
+      "frontier": 13,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 10,
+      "generated": 21,
+      "frontier": 12,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 11,
+      "generated": 21,
+      "frontier": 11,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 12,
+      "generated": 21,
+      "frontier": 10,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 13,
+      "generated": 22,
+      "frontier": 10,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 14,
+      "generated": 24,
+      "frontier": 11,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 15,
+      "generated": 24,
+      "frontier": 10,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 16,
+      "generated": 24,
+      "frontier": 9,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 17,
+      "generated": 25,
+      "frontier": 9,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 18,
+      "generated": 26,
+      "frontier": 9,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 19,
+      "generated": 27,
+      "frontier": 9,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 20,
+      "generated": 28,
+      "frontier": 9,
+      "best_goal_count": 3,
+      "min_h": 0
+    }
+  ],
+  "steps": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "expanded_by_step": [
+    0,
+    6,
+    20,
+    20
+  ],
+  "generated_by_step": [
+    0,
+    20,
+    28,
+    28
+  ],
+  "actions": [
+    "START",
+    "MoveToTable(A,B)",
+    "Move(C,Table,A)",
+    "Move(B,Table,C)"
+  ]
+}

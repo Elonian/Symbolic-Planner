@@ -1,0 +1,67 @@
+{
+  "environment": "BlocksTower4.txt",
+  "method": "astar_goal",
+  "source": "python search replay",
+  "solved": true,
+  "expanded_total": 4,
+  "generated_total": 12,
+  "elapsed_ms": 4.835135012399405,
+  "records": [
+    {
+      "expanded": 1,
+      "generated": 2,
+      "frontier": 2,
+      "best_goal_count": 1,
+      "min_h": 3
+    },
+    {
+      "expanded": 2,
+      "generated": 7,
+      "frontier": 6,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 3,
+      "generated": 10,
+      "frontier": 8,
+      "best_goal_count": 3,
+      "min_h": 1
+    },
+    {
+      "expanded": 4,
+      "generated": 12,
+      "frontier": 9,
+      "best_goal_count": 4,
+      "min_h": 0
+    }
+  ],
+  "steps": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "expanded_by_step": [
+    0,
+    2,
+    3,
+    4,
+    4
+  ],
+  "generated_by_step": [
+    0,
+    7,
+    10,
+    12,
+    12
+  ],
+  "actions": [
+    "START",
+    "MoveToTable(A,B)",
+    "Move(B,C,A)",
+    "Move(C,D,B)",
+    "Move(D,Table,C)"
+  ]
+}

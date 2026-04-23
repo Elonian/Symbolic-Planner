@@ -1,0 +1,16 @@
+Symbols: R1,R2,R3,MedKit,Radio,Water,Staging,Depot,Shelter,Clinic,Command
+Initial conditions: Robot(R1), Robot(R2), Robot(R3), Item(MedKit), Item(Radio), Item(Water), Loc(Staging), Loc(Depot), Loc(Shelter), Loc(Clinic), Loc(Command), At(R1,Staging), At(R2,Staging), At(R3,Staging), Empty(R1), Empty(R2), Empty(R3), Assigned(R1,MedKit), Assigned(R2,Radio), Assigned(R3,Water), ItemAt(MedKit,Depot), ItemAt(Radio,Depot), ItemAt(Water,Depot)
+Goal conditions: ItemAt(MedKit,Clinic), ItemAt(Radio,Command), ItemAt(Water,Shelter)
+
+Actions:
+        Drive(r,x,y)
+        Preconditions: Robot(r), Loc(x), Loc(y), At(r,x)
+        Effects: At(r,y), !At(r,x)
+
+        Pickup(r,i,l)
+        Preconditions: Robot(r), Item(i), Loc(l), Assigned(r,i), At(r,l), ItemAt(i,l), Empty(r)
+        Effects: Carrying(r,i), !ItemAt(i,l), !Empty(r)
+
+        Drop(r,i,l)
+        Preconditions: Robot(r), Item(i), Loc(l), Assigned(r,i), At(r,l), Carrying(r,i)
+        Effects: ItemAt(i,l), Empty(r), !Carrying(r,i)

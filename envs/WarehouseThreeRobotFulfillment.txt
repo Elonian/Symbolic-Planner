@@ -1,0 +1,16 @@
+Symbols: R1,R2,R3,PartA,PartB,PartC,Dock,Aisle1,Aisle2,Pack,Quality
+Initial conditions: Robot(R1), Robot(R2), Robot(R3), Item(PartA), Item(PartB), Item(PartC), Loc(Dock), Loc(Aisle1), Loc(Aisle2), Loc(Pack), Loc(Quality), At(R1,Dock), At(R2,Dock), At(R3,Dock), Empty(R1), Empty(R2), Empty(R3), Assigned(R1,PartA), Assigned(R2,PartB), Assigned(R3,PartC), ItemAt(PartA,Aisle1), ItemAt(PartB,Aisle2), ItemAt(PartC,Dock)
+Goal conditions: ItemAt(PartA,Pack), ItemAt(PartB,Quality), ItemAt(PartC,Pack)
+
+Actions:
+        Drive(r,x,y)
+        Preconditions: Robot(r), Loc(x), Loc(y), At(r,x)
+        Effects: At(r,y), !At(r,x)
+
+        Pickup(r,i,l)
+        Preconditions: Robot(r), Item(i), Loc(l), Assigned(r,i), At(r,l), ItemAt(i,l), Empty(r)
+        Effects: Carrying(r,i), !ItemAt(i,l), !Empty(r)
+
+        Drop(r,i,l)
+        Preconditions: Robot(r), Item(i), Loc(l), Assigned(r,i), At(r,l), Carrying(r,i)
+        Effects: ItemAt(i,l), Empty(r), !Carrying(r,i)

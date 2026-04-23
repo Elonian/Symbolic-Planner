@@ -1,0 +1,13 @@
+{
+  "planner_name": "Weighted A Star Search [w=5, delete-relaxation-relaxed-plan]",
+  "solved": true,
+  "plan_length": 21,
+  "expanded": 264,
+  "generated": 290,
+  "grounded_actions": 225,
+  "time_ms": 225.512,
+  "returncode": 0,
+  "plan_length_from_output": 21,
+  "valid_replay": true,
+  "missing_goals": []
+}

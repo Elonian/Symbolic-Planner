@@ -1,0 +1,67 @@
+Environment: /mntdatalora/src/Symbolic-Planner/envs/FireExtinguisher.txt
+***** Environment *****
+
+Symbols: A,B,C,D,E,F,Q,R,W,
+Initial conditions: At(Q,B) At(R,A) EmptyTank(Q) Fire(F) HighCharge(Q) InAir(Q) Loc(A) Loc(B) Loc(C) Loc(D) Loc(E) Loc(F) Loc(W) Quad(Q) Rob(R) 
+Goal conditions: ExtThree(F) 
+Actions:
+MoveToLoc(x,y)
+Precondition: Loc(x) Loc(y) At(R,x) InAir(Q) 
+Effect: At(R,y) !At(R,x) 
+
+MoveTogether(x,y)
+Precondition: Loc(x) Loc(y) At(R,x) At(Q,x) OnRob(Q) 
+Effect: !At(R,x) !At(Q,x) At(R,y) At(Q,y) 
+
+TakeOffFromRob(z)
+Precondition: Loc(z) At(R,z) At(Q,z) HighCharge(Q) OnRob(Q) 
+Effect: InAir(Q) !OnRob(Q) 
+
+LandOnRob(z)
+Precondition: Loc(z) At(R,z) At(Q,z) InAir(Q) 
+Effect: !InAir(Q) OnRob(Q) 
+
+Charge(x)
+Precondition: Quad(x) LowCharge(x) OnRob(x) 
+Effect: !LowCharge(x) HighCharge(x) 
+
+FillWater(x)
+Precondition: Quad(x) OnRob(x) EmptyTank(x) At(R,W) At(Q,W) 
+Effect: !EmptyTank(x) FullTank(Q) 
+
+PourOnce(x)
+Precondition: Fire(x) At(Q,x) InAir(Q) FullTank(Q) HighCharge(Q) 
+Effect: ExtOne(x) EmptyTank(Q) !FullTank(Q) LowCharge(Q) !HighCharge(Q) 
+
+PourTwice(x)
+Precondition: Fire(x) At(Q,x) InAir(Q) FullTank(Q) HighCharge(Q) ExtOne(x) 
+Effect: !ExtOne(x) ExtTwo(x) EmptyTank(Q) !FullTank(Q) LowCharge(Q) !HighCharge(Q) 
+
+PourThrice(x)
+Precondition: Fire(x) At(Q,x) InAir(Q) FullTank(Q) HighCharge(Q) ExtTwo(x) 
+Effect: !ExtTwo(x) ExtThree(x) EmptyTank(Q) !FullTank(Q) LowCharge(Q) !HighCharge(Q) 
+
+***** Environment Created! *****
+
+Plan: 
+MoveToLoc(A,B) 
+LandOnRob(B) 
+MoveTogether(B,W) 
+FillWater(Q) 
+MoveTogether(W,F) 
+TakeOffFromRob(F) 
+PourOnce(F) 
+LandOnRob(F) 
+Charge(Q) 
+MoveTogether(F,W) 
+FillWater(Q) 
+MoveTogether(W,F) 
+TakeOffFromRob(F) 
+PourTwice(F) 
+LandOnRob(F) 
+Charge(Q) 
+MoveTogether(F,W) 
+FillWater(Q) 
+MoveTogether(W,F) 
+TakeOffFromRob(F) 
+PourThrice(F) 

@@ -1,0 +1,155 @@
+{
+  "environment": "BlocksTwoStack5.txt",
+  "method": "optimal",
+  "source": "python search replay",
+  "solved": true,
+  "expanded_total": 16,
+  "generated_total": 137,
+  "elapsed_ms": 183.16246301401407,
+  "records": [
+    {
+      "expanded": 1,
+      "generated": 6,
+      "frontier": 6,
+      "best_goal_count": 1,
+      "min_h": 2
+    },
+    {
+      "expanded": 2,
+      "generated": 17,
+      "frontier": 16,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 3,
+      "generated": 24,
+      "frontier": 22,
+      "best_goal_count": 3,
+      "min_h": 1
+    },
+    {
+      "expanded": 4,
+      "generated": 40,
+      "frontier": 37,
+      "best_goal_count": 3,
+      "min_h": 1
+    },
+    {
+      "expanded": 5,
+      "generated": 47,
+      "frontier": 43,
+      "best_goal_count": 3,
+      "min_h": 1
+    },
+    {
+      "expanded": 6,
+      "generated": 63,
+      "frontier": 58,
+      "best_goal_count": 3,
+      "min_h": 1
+    },
+    {
+      "expanded": 7,
+      "generated": 88,
+      "frontier": 82,
+      "best_goal_count": 3,
+      "min_h": 1
+    },
+    {
+      "expanded": 8,
+      "generated": 102,
+      "frontier": 95,
+      "best_goal_count": 3,
+      "min_h": 1
+    },
+    {
+      "expanded": 9,
+      "generated": 105,
+      "frontier": 97,
+      "best_goal_count": 3,
+      "min_h": 1
+    },
+    {
+      "expanded": 10,
+      "generated": 113,
+      "frontier": 104,
+      "best_goal_count": 3,
+      "min_h": 1
+    },
+    {
+      "expanded": 11,
+      "generated": 120,
+      "frontier": 110,
+      "best_goal_count": 3,
+      "min_h": 1
+    },
+    {
+      "expanded": 12,
+      "generated": 127,
+      "frontier": 116,
+      "best_goal_count": 3,
+      "min_h": 1
+    },
+    {
+      "expanded": 13,
+      "generated": 132,
+      "frontier": 120,
+      "best_goal_count": 4,
+      "min_h": 1
+    },
+    {
+      "expanded": 14,
+      "generated": 133,
+      "frontier": 119,
+      "best_goal_count": 4,
+      "min_h": 1
+    },
+    {
+      "expanded": 15,
+      "generated": 135,
+      "frontier": 120,
+      "best_goal_count": 4,
+      "min_h": 1
+    },
+    {
+      "expanded": 16,
+      "generated": 137,
+      "frontier": 121,
+      "best_goal_count": 5,
+      "min_h": 0
+    }
+  ],
+  "steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "expanded_by_step": [
+    0,
+    2,
+    3,
+    15,
+    16,
+    16
+  ],
+  "generated_by_step": [
+    0,
+    17,
+    24,
+    135,
+    137,
+    137
+  ],
+  "actions": [
+    "START",
+    "MoveToTable(A,B)",
+    "Move(B,C,A)",
+    "Move(C,Table,B)",
+    "Move(D,E,C)",
+    "Move(E,Table,D)"
+  ]
+}

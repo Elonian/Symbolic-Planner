@@ -1,0 +1,198 @@
+{
+  "environment": "BlocksTriangle.txt",
+  "method": "weighted_ff",
+  "source": "python search replay",
+  "solved": true,
+  "expanded_total": 21,
+  "generated_total": 140,
+  "elapsed_ms": 200.39065700257197,
+  "records": [
+    {
+      "expanded": 1,
+      "generated": 2,
+      "frontier": 2,
+      "best_goal_count": 1,
+      "min_h": 3
+    },
+    {
+      "expanded": 2,
+      "generated": 7,
+      "frontier": 6,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 3,
+      "generated": 17,
+      "frontier": 15,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 4,
+      "generated": 33,
+      "frontier": 30,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 5,
+      "generated": 42,
+      "frontier": 38,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 6,
+      "generated": 46,
+      "frontier": 41,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 7,
+      "generated": 53,
+      "frontier": 47,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 8,
+      "generated": 60,
+      "frontier": 53,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 9,
+      "generated": 64,
+      "frontier": 56,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 10,
+      "generated": 67,
+      "frontier": 58,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 11,
+      "generated": 67,
+      "frontier": 57,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 12,
+      "generated": 70,
+      "frontier": 59,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 13,
+      "generated": 78,
+      "frontier": 66,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 14,
+      "generated": 86,
+      "frontier": 73,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 15,
+      "generated": 93,
+      "frontier": 79,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 16,
+      "generated": 109,
+      "frontier": 94,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 17,
+      "generated": 123,
+      "frontier": 107,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 18,
+      "generated": 127,
+      "frontier": 110,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 19,
+      "generated": 130,
+      "frontier": 112,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 20,
+      "generated": 136,
+      "frontier": 117,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 21,
+      "generated": 140,
+      "frontier": 120,
+      "best_goal_count": 3,
+      "min_h": 0
+    }
+  ],
+  "steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "expanded_by_step": [
+    0,
+    2,
+    13,
+    14,
+    15,
+    20,
+    21,
+    21
+  ],
+  "generated_by_step": [
+    0,
+    7,
+    78,
+    86,
+    93,
+    136,
+    140,
+    140
+  ],
+  "actions": [
+    "START",
+    "MoveToTable(T0,B0)",
+    "MoveToTable(B0,B1)",
+    "Move(T1,B3,B0)",
+    "Move(B1,B4,B3)",
+    "Move(T1,B0,B4)",
+    "Move(B0,Table,B1)",
+    "Move(T1,B4,B0)"
+  ]
+}

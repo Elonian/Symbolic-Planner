@@ -1,0 +1,13 @@
+{
+  "planner_name": "A Star Search [delete-relaxation-hadd]",
+  "solved": true,
+  "plan_length": 7,
+  "expanded": 7,
+  "generated": 61,
+  "grounded_actions": 576,
+  "time_ms": 42.0098,
+  "returncode": 0,
+  "plan_length_from_output": 7,
+  "valid_replay": true,
+  "missing_goals": []
+}

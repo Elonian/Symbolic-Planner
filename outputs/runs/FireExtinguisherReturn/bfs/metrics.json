@@ -1,0 +1,13 @@
+{
+  "planner_name": "Breadth First Search",
+  "solved": true,
+  "plan_length": 24,
+  "expanded": 402,
+  "generated": 416,
+  "grounded_actions": 225,
+  "time_ms": 23.6708,
+  "returncode": 0,
+  "plan_length_from_output": 24,
+  "valid_replay": true,
+  "missing_goals": []
+}

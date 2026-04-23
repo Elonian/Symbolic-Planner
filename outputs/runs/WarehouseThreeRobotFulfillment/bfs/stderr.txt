@@ -1,0 +1,1 @@
+Planner: Breadth First Search | solved=yes | plan_length=11 | expanded=10339 | generated=15062 | grounded_actions=3993 | time_ms=5410.73

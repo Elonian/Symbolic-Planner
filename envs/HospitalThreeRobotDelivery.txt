@@ -1,0 +1,16 @@
+Symbols: R1,R2,R3,MedKit,BloodSample,SterileTray,Garage,Pharmacy,Ward,Lab,OR
+Initial conditions: Robot(R1), Robot(R2), Robot(R3), Item(MedKit), Item(BloodSample), Item(SterileTray), Loc(Garage), Loc(Pharmacy), Loc(Ward), Loc(Lab), Loc(OR), At(R1,Garage), At(R2,Garage), At(R3,Garage), Empty(R1), Empty(R2), Empty(R3), Assigned(R1,MedKit), Assigned(R2,BloodSample), Assigned(R3,SterileTray), ItemAt(MedKit,Pharmacy), ItemAt(BloodSample,Ward), ItemAt(SterileTray,OR)
+Goal conditions: ItemAt(MedKit,Ward), ItemAt(BloodSample,Lab), ItemAt(SterileTray,Pharmacy)
+
+Actions:
+        Drive(r,x,y)
+        Preconditions: Robot(r), Loc(x), Loc(y), At(r,x)
+        Effects: At(r,y), !At(r,x)
+
+        Pickup(r,i,l)
+        Preconditions: Robot(r), Item(i), Loc(l), Assigned(r,i), At(r,l), ItemAt(i,l), Empty(r)
+        Effects: Carrying(r,i), !ItemAt(i,l), !Empty(r)
+
+        Drop(r,i,l)
+        Preconditions: Robot(r), Item(i), Loc(l), Assigned(r,i), At(r,l), Carrying(r,i)
+        Effects: ItemAt(i,l), Empty(r), !Carrying(r,i)

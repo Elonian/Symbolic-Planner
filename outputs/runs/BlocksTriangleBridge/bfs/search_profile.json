@@ -1,0 +1,51 @@
+{
+  "environment": "BlocksTriangleBridge.txt",
+  "method": "bfs",
+  "source": "linear fallback",
+  "reason": "search replay skipped for large run; using aggregate planner counters",
+  "solved": true,
+  "expanded_total": 3050,
+  "generated_total": 5353,
+  "elapsed_ms": 414.773,
+  "records": [],
+  "steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "expanded_by_step": [
+    0,
+    436,
+    871,
+    1307,
+    1743,
+    2179,
+    2614,
+    3050
+  ],
+  "generated_by_step": [
+    0,
+    765,
+    1529,
+    2294,
+    3059,
+    3824,
+    4588,
+    5353
+  ],
+  "actions": [
+    "START",
+    "MoveToTable(T0,B0)",
+    "Move(B0,B2,B4)",
+    "Move(T1,B1,B2)",
+    "Move(B1,B3,B0)",
+    "Move(T1,B2,B1)",
+    "Move(B3,Table,B2)",
+    "Move(T0,Table,B3)"
+  ]
+}

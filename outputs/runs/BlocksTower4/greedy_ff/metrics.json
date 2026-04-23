@@ -1,0 +1,13 @@
+{
+  "planner_name": "Greedy Best First Search [delete-relaxation-relaxed-plan]",
+  "solved": true,
+  "plan_length": 4,
+  "expanded": 4,
+  "generated": 12,
+  "grounded_actions": 150,
+  "time_ms": 7.41561,
+  "returncode": 0,
+  "plan_length_from_output": 4,
+  "valid_replay": true,
+  "missing_goals": []
+}

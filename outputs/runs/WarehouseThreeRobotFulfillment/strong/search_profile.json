@@ -1,0 +1,144 @@
+{
+  "environment": "WarehouseThreeRobotFulfillment.txt",
+  "method": "strong",
+  "source": "python search replay",
+  "solved": true,
+  "expanded_total": 11,
+  "generated_total": 133,
+  "elapsed_ms": 1015.5225299531594,
+  "records": [
+    {
+      "expanded": 1,
+      "generated": 13,
+      "frontier": 13,
+      "best_goal_count": 0,
+      "min_h": 10
+    },
+    {
+      "expanded": 2,
+      "generated": 23,
+      "frontier": 22,
+      "best_goal_count": 0,
+      "min_h": 9
+    },
+    {
+      "expanded": 3,
+      "generated": 33,
+      "frontier": 31,
+      "best_goal_count": 0,
+      "min_h": 8
+    },
+    {
+      "expanded": 4,
+      "generated": 46,
+      "frontier": 43,
+      "best_goal_count": 0,
+      "min_h": 7
+    },
+    {
+      "expanded": 5,
+      "generated": 57,
+      "frontier": 53,
+      "best_goal_count": 1,
+      "min_h": 6
+    },
+    {
+      "expanded": 6,
+      "generated": 71,
+      "frontier": 66,
+      "best_goal_count": 1,
+      "min_h": 5
+    },
+    {
+      "expanded": 7,
+      "generated": 84,
+      "frontier": 78,
+      "best_goal_count": 1,
+      "min_h": 4
+    },
+    {
+      "expanded": 8,
+      "generated": 95,
+      "frontier": 88,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 9,
+      "generated": 109,
+      "frontier": 101,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 10,
+      "generated": 122,
+      "frontier": 113,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 11,
+      "generated": 133,
+      "frontier": 123,
+      "best_goal_count": 3,
+      "min_h": 0
+    }
+  ],
+  "steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "expanded_by_step": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    11
+  ],
+  "generated_by_step": [
+    0,
+    23,
+    33,
+    46,
+    57,
+    71,
+    84,
+    95,
+    109,
+    122,
+    133,
+    133
+  ],
+  "actions": [
+    "START",
+    "Drive(R1,Dock,Aisle1)",
+    "Drive(R2,Dock,Aisle2)",
+    "Pickup(R1,PartA,Aisle1)",
+    "Drive(R1,Aisle1,Pack)",
+    "Drop(R1,PartA,Pack)",
+    "Pickup(R2,PartB,Aisle2)",
+    "Drive(R2,Aisle2,Quality)",
+    "Drop(R2,PartB,Quality)",
+    "Pickup(R3,PartC,Dock)",
+    "Drive(R3,Dock,Pack)",
+    "Drop(R3,PartC,Pack)"
+  ]
+}

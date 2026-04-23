@@ -1,0 +1,92 @@
+{
+  "environment": "BlocksSixPairing.txt",
+  "method": "astar_goal",
+  "source": "python search replay",
+  "solved": true,
+  "expanded_total": 7,
+  "generated_total": 65,
+  "elapsed_ms": 9.590649977326393,
+  "records": [
+    {
+      "expanded": 1,
+      "generated": 6,
+      "frontier": 6,
+      "best_goal_count": 2,
+      "min_h": 4
+    },
+    {
+      "expanded": 2,
+      "generated": 9,
+      "frontier": 8,
+      "best_goal_count": 2,
+      "min_h": 4
+    },
+    {
+      "expanded": 3,
+      "generated": 20,
+      "frontier": 18,
+      "best_goal_count": 3,
+      "min_h": 3
+    },
+    {
+      "expanded": 4,
+      "generated": 28,
+      "frontier": 25,
+      "best_goal_count": 4,
+      "min_h": 2
+    },
+    {
+      "expanded": 5,
+      "generated": 35,
+      "frontier": 31,
+      "best_goal_count": 4,
+      "min_h": 2
+    },
+    {
+      "expanded": 6,
+      "generated": 52,
+      "frontier": 47,
+      "best_goal_count": 5,
+      "min_h": 1
+    },
+    {
+      "expanded": 7,
+      "generated": 65,
+      "frontier": 59,
+      "best_goal_count": 6,
+      "min_h": 0
+    }
+  ],
+  "steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "expanded_by_step": [
+    0,
+    3,
+    4,
+    6,
+    7,
+    7
+  ],
+  "generated_by_step": [
+    0,
+    20,
+    28,
+    52,
+    65,
+    65
+  ],
+  "actions": [
+    "START",
+    "MoveToTable(D,E)",
+    "Move(A,B,D)",
+    "MoveToTable(E,F)",
+    "Move(B,C,E)",
+    "Move(C,Table,F)"
+  ]
+}

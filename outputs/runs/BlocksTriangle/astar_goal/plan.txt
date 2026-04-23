@@ -1,0 +1,6 @@
+MoveToTable(T0,B0)
+MoveToTable(T1,B3)
+MoveToTable(B0,B1)
+Move(B1,B4,B3)
+Move(B0,Table,B1)
+Move(T1,Table,B0)

@@ -1,0 +1,85 @@
+{
+  "environment": "BlocksSixPairing.txt",
+  "method": "astar",
+  "source": "python search replay",
+  "solved": true,
+  "expanded_total": 6,
+  "generated_total": 62,
+  "elapsed_ms": 85.23480797884986,
+  "records": [
+    {
+      "expanded": 1,
+      "generated": 6,
+      "frontier": 6,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 2,
+      "generated": 17,
+      "frontier": 16,
+      "best_goal_count": 3,
+      "min_h": 3
+    },
+    {
+      "expanded": 3,
+      "generated": 25,
+      "frontier": 23,
+      "best_goal_count": 4,
+      "min_h": 2
+    },
+    {
+      "expanded": 4,
+      "generated": 32,
+      "frontier": 29,
+      "best_goal_count": 4,
+      "min_h": 2
+    },
+    {
+      "expanded": 5,
+      "generated": 49,
+      "frontier": 45,
+      "best_goal_count": 5,
+      "min_h": 1
+    },
+    {
+      "expanded": 6,
+      "generated": 62,
+      "frontier": 57,
+      "best_goal_count": 6,
+      "min_h": 0
+    }
+  ],
+  "steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "expanded_by_step": [
+    0,
+    2,
+    3,
+    5,
+    6,
+    6
+  ],
+  "generated_by_step": [
+    0,
+    17,
+    25,
+    49,
+    62,
+    62
+  ],
+  "actions": [
+    "START",
+    "MoveToTable(D,E)",
+    "Move(A,B,D)",
+    "MoveToTable(E,F)",
+    "Move(B,C,E)",
+    "Move(C,Table,F)"
+  ]
+}

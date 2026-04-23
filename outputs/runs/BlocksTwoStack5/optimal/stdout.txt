@@ -1,0 +1,23 @@
+Environment: /mntdatalora/src/Symbolic-Planner/envs/BlocksTwoStack5.txt
+***** Environment *****
+
+Symbols: A,B,C,D,E,Table,
+Initial conditions: Block(A) Block(B) Block(C) Block(D) Block(E) Clear(A) Clear(D) On(A,B) On(B,C) On(C,Table) On(D,E) On(E,Table) 
+Goal conditions: On(A,Table) On(B,A) On(C,B) On(D,C) On(E,D) 
+Actions:
+MoveToTable(b,x)
+Precondition: On(b,x) Clear(b) Block(b) Block(x) 
+Effect: On(b,Table) Clear(x) !On(b,x) 
+
+Move(b,x,y)
+Precondition: On(b,x) Clear(b) Clear(y) Block(b) Block(y) 
+Effect: On(b,y) Clear(x) !On(b,x) !Clear(y) 
+
+***** Environment Created! *****
+
+Plan: 
+MoveToTable(A,B) 
+Move(B,C,A) 
+Move(C,Table,B) 
+Move(D,E,C) 
+Move(E,Table,D) 

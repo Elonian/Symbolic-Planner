@@ -1,0 +1,323 @@
+{
+  "environment": "HospitalThreeRobotDelivery.txt",
+  "method": "strong",
+  "source": "python search replay",
+  "solved": true,
+  "expanded_total": 36,
+  "generated_total": 359,
+  "elapsed_ms": 2808.9833720005117,
+  "records": [
+    {
+      "expanded": 1,
+      "generated": 12,
+      "frontier": 12,
+      "best_goal_count": 0,
+      "min_h": 11
+    },
+    {
+      "expanded": 2,
+      "generated": 21,
+      "frontier": 20,
+      "best_goal_count": 0,
+      "min_h": 10
+    },
+    {
+      "expanded": 3,
+      "generated": 29,
+      "frontier": 27,
+      "best_goal_count": 0,
+      "min_h": 9
+    },
+    {
+      "expanded": 4,
+      "generated": 38,
+      "frontier": 35,
+      "best_goal_count": 0,
+      "min_h": 8
+    },
+    {
+      "expanded": 5,
+      "generated": 50,
+      "frontier": 46,
+      "best_goal_count": 0,
+      "min_h": 7
+    },
+    {
+      "expanded": 6,
+      "generated": 60,
+      "frontier": 55,
+      "best_goal_count": 1,
+      "min_h": 6
+    },
+    {
+      "expanded": 7,
+      "generated": 73,
+      "frontier": 67,
+      "best_goal_count": 1,
+      "min_h": 5
+    },
+    {
+      "expanded": 8,
+      "generated": 85,
+      "frontier": 78,
+      "best_goal_count": 1,
+      "min_h": 4
+    },
+    {
+      "expanded": 9,
+      "generated": 95,
+      "frontier": 87,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 10,
+      "generated": 108,
+      "frontier": 99,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 11,
+      "generated": 119,
+      "frontier": 109,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 12,
+      "generated": 128,
+      "frontier": 117,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 13,
+      "generated": 140,
+      "frontier": 128,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 14,
+      "generated": 151,
+      "frontier": 138,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 15,
+      "generated": 160,
+      "frontier": 146,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 16,
+      "generated": 172,
+      "frontier": 157,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 17,
+      "generated": 184,
+      "frontier": 168,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 18,
+      "generated": 193,
+      "frontier": 176,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 19,
+      "generated": 205,
+      "frontier": 187,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 20,
+      "generated": 213,
+      "frontier": 194,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 21,
+      "generated": 221,
+      "frontier": 201,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 22,
+      "generated": 226,
+      "frontier": 205,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 23,
+      "generated": 234,
+      "frontier": 212,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 24,
+      "generated": 243,
+      "frontier": 220,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 25,
+      "generated": 250,
+      "frontier": 226,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 26,
+      "generated": 260,
+      "frontier": 235,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 27,
+      "generated": 269,
+      "frontier": 243,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 28,
+      "generated": 276,
+      "frontier": 249,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 29,
+      "generated": 284,
+      "frontier": 256,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 30,
+      "generated": 289,
+      "frontier": 260,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 31,
+      "generated": 297,
+      "frontier": 267,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 32,
+      "generated": 310,
+      "frontier": 279,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 33,
+      "generated": 321,
+      "frontier": 289,
+      "best_goal_count": 2,
+      "min_h": 3
+    },
+    {
+      "expanded": 34,
+      "generated": 335,
+      "frontier": 302,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 35,
+      "generated": 348,
+      "frontier": 314,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 36,
+      "generated": 359,
+      "frontier": 324,
+      "best_goal_count": 3,
+      "min_h": 0
+    }
+  ],
+  "steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "expanded_by_step": [
+    0,
+    2,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    36
+  ],
+  "generated_by_step": [
+    0,
+    21,
+    269,
+    276,
+    284,
+    289,
+    297,
+    310,
+    321,
+    335,
+    348,
+    359,
+    359
+  ],
+  "actions": [
+    "START",
+    "Drive(R1,Garage,Pharmacy)",
+    "Drive(R2,Garage,Ward)",
+    "Drive(R3,Garage,OR)",
+    "Pickup(R1,MedKit,Pharmacy)",
+    "Drive(R1,Pharmacy,Ward)",
+    "Drop(R1,MedKit,Ward)",
+    "Pickup(R2,BloodSample,Ward)",
+    "Drive(R2,Ward,Lab)",
+    "Drop(R2,BloodSample,Lab)",
+    "Pickup(R3,SterileTray,OR)",
+    "Drive(R3,OR,Pharmacy)",
+    "Drop(R3,SterileTray,Pharmacy)"
+  ]
+}

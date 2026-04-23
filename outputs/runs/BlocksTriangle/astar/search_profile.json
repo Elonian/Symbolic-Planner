@@ -1,0 +1,243 @@
+{
+  "environment": "BlocksTriangle.txt",
+  "method": "astar",
+  "source": "python search replay",
+  "solved": true,
+  "expanded_total": 28,
+  "generated_total": 176,
+  "elapsed_ms": 255.98578801145777,
+  "records": [
+    {
+      "expanded": 1,
+      "generated": 2,
+      "frontier": 2,
+      "best_goal_count": 1,
+      "min_h": 3
+    },
+    {
+      "expanded": 2,
+      "generated": 7,
+      "frontier": 6,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 3,
+      "generated": 17,
+      "frontier": 15,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 4,
+      "generated": 20,
+      "frontier": 17,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 5,
+      "generated": 36,
+      "frontier": 32,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 6,
+      "generated": 36,
+      "frontier": 31,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 7,
+      "generated": 39,
+      "frontier": 33,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 8,
+      "generated": 47,
+      "frontier": 40,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 9,
+      "generated": 55,
+      "frontier": 47,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 10,
+      "generated": 57,
+      "frontier": 48,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 11,
+      "generated": 64,
+      "frontier": 54,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 12,
+      "generated": 71,
+      "frontier": 60,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 13,
+      "generated": 79,
+      "frontier": 67,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 14,
+      "generated": 83,
+      "frontier": 70,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 15,
+      "generated": 86,
+      "frontier": 72,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 16,
+      "generated": 92,
+      "frontier": 77,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 17,
+      "generated": 99,
+      "frontier": 83,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 18,
+      "generated": 115,
+      "frontier": 98,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 19,
+      "generated": 129,
+      "frontier": 111,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 20,
+      "generated": 136,
+      "frontier": 117,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 21,
+      "generated": 141,
+      "frontier": 121,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 22,
+      "generated": 141,
+      "frontier": 120,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 23,
+      "generated": 143,
+      "frontier": 121,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 24,
+      "generated": 144,
+      "frontier": 121,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 25,
+      "generated": 145,
+      "frontier": 121,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 26,
+      "generated": 158,
+      "frontier": 133,
+      "best_goal_count": 2,
+      "min_h": 2
+    },
+    {
+      "expanded": 27,
+      "generated": 169,
+      "frontier": 143,
+      "best_goal_count": 2,
+      "min_h": 1
+    },
+    {
+      "expanded": 28,
+      "generated": 176,
+      "frontier": 149,
+      "best_goal_count": 3,
+      "min_h": 0
+    }
+  ],
+  "steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "expanded_by_step": [
+    0,
+    2,
+    3,
+    26,
+    27,
+    28,
+    28
+  ],
+  "generated_by_step": [
+    0,
+    7,
+    17,
+    158,
+    169,
+    176,
+    176
+  ],
+  "actions": [
+    "START",
+    "MoveToTable(T0,B0)",
+    "MoveToTable(T1,B3)",
+    "MoveToTable(B0,B1)",
+    "Move(B1,B4,B3)",
+    "Move(B0,Table,B1)",
+    "Move(T1,Table,B0)"
+  ]
+}

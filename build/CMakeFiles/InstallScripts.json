@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/mntdatalora/src/Symbolic-Planner/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

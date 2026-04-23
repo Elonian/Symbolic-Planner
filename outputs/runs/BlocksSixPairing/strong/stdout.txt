@@ -1,0 +1,23 @@
+Environment: /mntdatalora/src/Symbolic-Planner/envs/BlocksSixPairing.txt
+***** Environment *****
+
+Symbols: A,B,C,D,E,F,Table,
+Initial conditions: Block(A) Block(B) Block(C) Block(D) Block(E) Block(F) Clear(A) Clear(D) On(A,B) On(B,C) On(C,Table) On(D,E) On(E,F) On(F,Table) 
+Goal conditions: On(A,D) On(B,E) On(C,F) On(D,Table) On(E,Table) On(F,Table) 
+Actions:
+MoveToTable(b,x)
+Precondition: On(b,x) Clear(b) Block(b) Block(x) 
+Effect: On(b,Table) Clear(x) !On(b,x) 
+
+Move(b,x,y)
+Precondition: On(b,x) Clear(b) Clear(y) Block(b) Block(y) 
+Effect: On(b,y) Clear(x) !On(b,x) !Clear(y) 
+
+***** Environment Created! *****
+
+Plan: 
+MoveToTable(D,E) 
+Move(A,B,D) 
+MoveToTable(E,F) 
+Move(B,C,E) 
+Move(C,Table,F) 
